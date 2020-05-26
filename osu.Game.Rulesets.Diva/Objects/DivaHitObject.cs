@@ -18,5 +18,6 @@ namespace osu.Game.Rulesets.Diva.Objects
         public float Y => Position.Y;
 
         public DivaAction ValidAction;
+        public Vector2 ApproachPieceOriginPosition;
     }
 }

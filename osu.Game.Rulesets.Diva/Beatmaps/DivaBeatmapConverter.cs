@@ -17,25 +17,25 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         public DivaBeatmapConverter(IBeatmap beatmap, Ruleset ruleset)
             : base(beatmap, ruleset)
         {
-            double num = Math.Round((double)beatmap.BeatmapInfo.BaseDifficulty.CircleSize);
-            double num2 = Math.Round((double)beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty);
-            float num3 = (float)beatmap.HitObjects.Count((HitObject h) => h is IHasEndTime) / (float)beatmap.HitObjects.Count;
-            if ((double)num3 < 0.2)
+            double od = (double)beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty;
+            if (od > 7.0d)
             {
                 this.TargetButtons = 4;
                 return;
             }
-            if ((double)num3 < 0.3 || num >= 5.0)
+            if (od > 4.5d)
             {
-                this.TargetButtons = ((num2 > 5.0) ? 4 : 3);
+                this.TargetButtons = 3;
                 return;
             }
-            if ((double)num3 > 0.6)
+            if (od > 2d)
             {
-                this.TargetButtons = ((num2 > 4.0) ? 2 : 1);
+                this.TargetButtons = 2;
                 return;
             }
             this.TargetButtons = 1;
+
+            //Console.WriteLine(this.TargetButtons);
         }
 
         public override bool CanConvert() => Beatmap.HitObjects.All(h => h is IHasPosition);
@@ -48,7 +48,8 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                 StartTime = original.StartTime,
                 Position = (original as IHasPosition)?.Position ?? Vector2.Zero,
                 ValidAction = ValidAction(),
-        };
+                ApproachPieceOriginPosition = new Vector2(500),
+            };
         }
 
         private DivaAction ValidAction()
@@ -58,14 +59,17 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             switch (prevAction)
             {
                 case DivaAction.Circle:
+                    if(this.TargetButtons < 2) break;
                     ac = DivaAction.Cross;
                     break;
 
                 case DivaAction.Cross:
+                    if (this.TargetButtons < 3) break;
                     ac = DivaAction.Square;
                     break;
 
                 case DivaAction.Square:
+                    if (this.TargetButtons < 4) break;
                     ac = DivaAction.Triangle;
                     break;
             }

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using osu.Framework.Allocation;
 using osu.Framework.Extensions.Color4Extensions;
 using osu.Framework.Graphics;
-using osu.Framework.Graphics.Containers;
 using osu.Framework.Graphics.Sprites;
 using osu.Framework.Graphics.Textures;
 using osu.Framework.Input.Bindings;
@@ -22,14 +21,16 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
     public class DrawableDivaHitObject : DrawableHitObject<DivaHitObject>, IKeyBindingHandler<DivaAction>
     {
-        private const double time_preempt = 600;
+        private const double time_preempt = 1000;
         private const double time_fadein = 400;
 
-        public override bool HandlePositionalInput => true;
+        public override bool HandlePositionalInput => false;
 
         private readonly Sprite approachHand;
+        private readonly Sprite approachPiece;
 
-        private DivaAction validAction;
+        private readonly DivaAction validAction;
+
         private bool validPress = false;
         private bool pressed = false;
 
@@ -42,6 +43,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
             Origin = Anchor.Centre;
             Position = hitObject.Position;
+            Scale = new Vector2(0.7f);
 
             AddRangeInternal(new Sprite[]
             {
@@ -50,8 +52,18 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                     Anchor = Anchor.Centre,
                     Origin = Anchor.Centre,
                     RelativeSizeAxes = Axes.Both,
-                    Depth = 0,
+                    Scale = new Vector2(1.4f),
+                    Rotation = 180f,
+                    Depth = 1,
                 },
+                approachPiece = new Sprite()
+                {
+                    Depth = 0,
+                    RelativeSizeAxes = Axes.Both,
+                    Anchor = Anchor.Centre,
+                    Origin = Anchor.Centre,
+                    Position = hitObject.ApproachPieceOriginPosition,
+                }
             });
 
             validAction = hitObject.ValidAction;
@@ -69,9 +81,10 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                 Origin = Anchor.Centre,
                 RelativeSizeAxes = Axes.Both,
                 Texture = textures.Get($"{textureLocation}{validAction.ToString()}Stat"),
-                Depth = 1,
-                Scale = new Vector2(0.7f),
+                Depth = 2,
             });
+
+            approachPiece.Texture = textures.Get($"{textureLocation}{validAction.ToString()}Move");
             approachHand.Texture = textures.Get("hand");
 
         }
@@ -146,8 +159,8 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         {
             this.FadeInFromZero(time_fadein);
             this.approachHand.ScaleTo(1f, time_fadein, Easing.In);
-            this.approachHand.Rotation = 180f;
             this.approachHand.RotateTo(360, time_preempt, Easing.In);
+            this.approachPiece.MoveTo(Vector2.Zero, time_preempt, Easing.InCirc);
         }
 
         protected override void UpdateStateTransforms(ArmedState state)
