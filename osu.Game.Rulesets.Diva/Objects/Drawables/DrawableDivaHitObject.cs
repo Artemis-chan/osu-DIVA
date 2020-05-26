@@ -16,19 +16,20 @@ using osuTK;
 using osuTK.Graphics;
 using osu.Game.Rulesets.Diva.Configuration;
 using osu.Framework.Bindables;
+using System;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
     public class DrawableDivaHitObject : DrawableHitObject<DivaHitObject>, IKeyBindingHandler<DivaAction>
     {
-        private const double time_preempt = 1000;
-        private const double time_fadein = 400;
+        private const double time_preempt = 850;
+        private const double time_fadein = 300;
 
         public override bool HandlePositionalInput => false;
 
         private readonly Sprite approachHand;
         private readonly Sprite approachPiece;
-
+        
         private readonly DivaAction validAction;
 
         private bool validPress = false;
@@ -52,7 +53,6 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                     Anchor = Anchor.Centre,
                     Origin = Anchor.Centre,
                     RelativeSizeAxes = Axes.Both,
-                    Scale = new Vector2(1.4f),
                     Rotation = 180f,
                     Depth = 1,
                 },
@@ -124,16 +124,12 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         protected override void CheckForResult(bool userTriggered, double timeOffset)
         {
-            if(Judged) return;
+            if(Judged || base.Time.Current < HitObject.StartTime) return;
 
-            if (!userTriggered)
+            if (!HitObject.HitWindows.CanBeHit(timeOffset))
             {
-                if (!HitObject.HitWindows.CanBeHit(timeOffset))
-                {
-                    ApplyResult(r => r.Type = HitResult.Miss);
-                    return;
-                }
-                
+                ApplyResult(r => r.Type = HitResult.Miss);
+                return;
             }
 
             var result = HitObject.HitWindows.ResultFor(timeOffset);
@@ -146,7 +142,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             {
                 if(validPress)
                     ApplyResult(r => r.Type = result);
-                else
+                else if(HitObject.HitWindows.CanBeHit(timeOffset))
                     ApplyResult(r => r.Type = HitResult.Miss);
 
                 pressed = false;
@@ -158,9 +154,10 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         protected override void UpdateInitialTransforms()
         {
             this.FadeInFromZero(time_fadein);
-            this.approachHand.ScaleTo(1f, time_fadein, Easing.In);
+            this.approachHand.ScaleTo(1.4f, time_fadein, Easing.In);
+
             this.approachHand.RotateTo(360, time_preempt, Easing.In);
-            this.approachPiece.MoveTo(Vector2.Zero, time_preempt, Easing.InCirc);
+            this.approachPiece.MoveTo(Vector2.Zero, time_preempt, Easing.In);
         }
 
         protected override void UpdateStateTransforms(ArmedState state)
@@ -196,6 +193,11 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         public void OnReleased(DivaAction action)
         {
+        }
+
+        protected override void Update()
+        {
+
         }
     }
 }

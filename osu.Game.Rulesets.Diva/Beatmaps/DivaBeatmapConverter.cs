@@ -14,6 +14,8 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 {
     public class DivaBeatmapConverter : BeatmapConverter<DivaHitObject>
     {
+        private const float approach_piece_distance = 1200;
+
         public DivaBeatmapConverter(IBeatmap beatmap, Ruleset ruleset)
             : base(beatmap, ruleset)
         {
@@ -42,13 +44,14 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 
         protected override IEnumerable<DivaHitObject> ConvertHitObject(HitObject original, IBeatmap beatmap)
         {
+            var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
             yield return new DivaHitObject
             {
                 Samples = original.Samples,
                 StartTime = original.StartTime,
-                Position = (original as IHasPosition)?.Position ?? Vector2.Zero,
+                Position = pos,
                 ValidAction = ValidAction(),
-                ApproachPieceOriginPosition = new Vector2(500),
+                ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
             };
         }
 
@@ -77,10 +80,21 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             prevAction = ac;
             return ac;
         }
-        
+
+        private Vector2 GetApproachPieceOriginPos(Vector2 currentObjectPos)
+        {
+            var dir = (prevObjectPos - currentObjectPos);
+            prevObjectPos = currentObjectPos;
+
+            if(dir == Vector2.Zero)
+                return new Vector2(approach_piece_distance);
+
+            return dir.Normalized() * approach_piece_distance;            
+        }        
 
         public int TargetButtons;
 
         private DivaAction prevAction = DivaAction.Triangle;
+        private Vector2 prevObjectPos = Vector2.Zero;
     }
 }
