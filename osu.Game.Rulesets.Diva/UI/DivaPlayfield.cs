@@ -3,14 +3,17 @@
 
 using osu.Framework.Allocation;
 using osu.Framework.Graphics;
+using osu.Framework.Input.Bindings;
+using osu.Game.Skinning;
+using osu.Game.Audio;
 using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Diva.UI
 {
     [Cached]
-    public class DivaPlayfield : Playfield
+    public class DivaPlayfield : Playfield, IKeyBindingHandler<DivaAction>
     {
-        //protected override GameplayCursorContainer CreateCursor() => new DivaCursorContainer();
+        SkinnableSound hitSample;
 
         [BackgroundDependencyLoader]
         private void load()
@@ -18,7 +21,18 @@ namespace osu.Game.Rulesets.Diva.UI
             AddRangeInternal(new Drawable[]
             {
                 HitObjectContainer,
+                hitSample = new SkinnableSound(new SampleInfo("normal-hitnormal")),
             });
+        }
+        
+        public bool OnPressed(DivaAction action)
+        {
+            this.hitSample.Play();
+            return true;
+        }
+
+        public void OnReleased(DivaAction action)
+        {
         }
     }
 }

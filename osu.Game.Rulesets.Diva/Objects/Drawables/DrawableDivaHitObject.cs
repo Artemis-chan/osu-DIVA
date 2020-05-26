@@ -105,6 +105,10 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             }
         };
 
+        public override void PlaySamples()
+        {
+        }
+
         protected override void CheckForResult(bool userTriggered, double timeOffset)
         {
             if(Judged) return;
@@ -166,6 +170,8 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         public bool OnPressed(DivaAction action)
         {
+            this.Samples.Play();
+            
             if (Judged)
                 return false;
 
