@@ -14,13 +14,18 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 {
     public class DivaBeatmapConverter : BeatmapConverter<DivaHitObject>
     {
+        //todo:
+        //make single position bursts to a line pattern
+        //every approach piece of a combo will come from one direction
+        //create patterns of same button
+
         private const float approach_piece_distance = 1200;
 
         public DivaBeatmapConverter(IBeatmap beatmap, Ruleset ruleset)
             : base(beatmap, ruleset)
         {
             double od = (double)beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty;
-            if (od > 7.0d)
+            if (od > 6.0d)
             {
                 this.TargetButtons = 4;
                 return;
@@ -55,6 +60,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             };
         }
 
+        //placeholder
         private DivaAction ValidAction()
         {
             var ac = DivaAction.Circle;
