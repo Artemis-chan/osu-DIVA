@@ -10,7 +10,7 @@ namespace osu.Game.Rulesets.Diva.UI
 {
     public class DivaSettingsSubsection : RulesetSettingsSubsection
     {
-        protected override string Header => "osu!Diva";
+        protected override string Header => "osu!DIVA";
 
         public DivaSettingsSubsection(Ruleset ruleset)
             : base(ruleset)

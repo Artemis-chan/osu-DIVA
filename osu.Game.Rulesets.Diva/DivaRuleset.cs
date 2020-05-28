@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.Diva
 {
     public class DivaRuleset : Ruleset
     {
-        public override string Description => "osu!Diva";
+        public override string Description => "osu!DIVA";
 
         public override DrawableRuleset CreateDrawableRulesetWith(IBeatmap beatmap, IReadOnlyList<Mod> mods = null) =>
             new DrawableDivaRuleset(this, beatmap, mods);
