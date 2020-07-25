@@ -18,32 +18,14 @@ namespace osu.Game.Rulesets.Diva.Replays
         {
         }
 
-        protected override bool IsImportant(DivaReplayFrame frame) => true;
-
-        protected Vector2 Position
+        protected override bool IsImportant(DivaReplayFrame frame) => frame.Actions.Count > 0;
+        
+        public override void CollectPendingInputs(List<IInput> inputs)
         {
-            get
+            inputs.Add(new ReplayState<DivaAction>()
             {
-                var frame = CurrentFrame;
-
-                if (frame == null)
-                    return Vector2.Zero;
-
-                Debug.Assert(CurrentTime != null);
-
-                return NextFrame != null ? Interpolation.ValueAt(CurrentTime.Value, frame.Position, NextFrame.Position, frame.Time, NextFrame.Time) : frame.Position;
-            }
-        }
-
-        public override List<IInput> GetPendingInputs()
-        {
-            return new List<IInput>
-            {
-                new MousePositionAbsoluteInput
-                {
-                    Position = GamefieldToScreenSpace(Position)
-                }
-            };
+                PressedActions = CurrentFrame?.Actions ?? new List<DivaAction>(),
+            });
         }
     }
 }

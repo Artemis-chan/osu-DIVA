@@ -6,6 +6,7 @@ using osu.Game.Beatmaps;
 using osu.Game.Replays;
 using osu.Game.Rulesets.Diva.Objects;
 using osu.Game.Rulesets.Replays;
+using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Diva.Replays
 {
@@ -28,11 +29,7 @@ namespace osu.Game.Rulesets.Diva.Replays
 
             foreach (DivaHitObject hitObject in Beatmap.HitObjects)
             {
-                Frames.Add(new DivaReplayFrame
-                {
-                    Time = hitObject.StartTime,
-                    Position = hitObject.Position,
-                });
+                Frames.Add(new DivaReplayFrame(hitObject.StartTime + hitObject.HitWindows.WindowFor(HitResult.Perfect), hitObject.ValidAction));
             }
 
             return Replay;
