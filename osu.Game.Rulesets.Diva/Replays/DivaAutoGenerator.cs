@@ -26,10 +26,10 @@ namespace osu.Game.Rulesets.Diva.Replays
         public override Replay Generate()
         {
             Frames.Add(new DivaReplayFrame());
-
             foreach (DivaHitObject hitObject in Beatmap.HitObjects)
             {
                 Frames.Add(new DivaReplayFrame(hitObject.StartTime + hitObject.HitWindows.WindowFor(HitResult.Perfect), hitObject.ValidAction));
+                Frames.Add(new DivaReplayFrame(hitObject.StartTime + 1d));
             }
 
             return Replay;
