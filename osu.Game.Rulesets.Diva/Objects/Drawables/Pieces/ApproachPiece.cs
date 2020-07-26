@@ -14,7 +14,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables.Pieces
         public Vector2 StartPos;
         public void UpdatePos(float blend)
         {
-            Position = Extensions.Slerp(StartPos, Vector2.Zero, blend, slerp_distance);
+            Position = Extensions.CubicInterpolate(StartPos, Vector2.Zero, blend, slerp_distance);
         }
         
 
