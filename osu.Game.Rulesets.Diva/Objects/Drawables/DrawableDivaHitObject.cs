@@ -36,7 +36,10 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         private bool validPress = false;
         private bool pressed = false;
 
+        private DivaRulesetConfigManager config2;
+
         private BindableBool useXB = new BindableBool(false);
+        private BindableBool enableVisualBursts = new BindableBool(true);
 
         public DrawableDivaHitObject(DivaHitObject hitObject)
             : base(hitObject)
@@ -74,6 +77,8 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         [BackgroundDependencyLoader(true)]
         private void load(TextureStore textures, DivaRulesetConfigManager config)
         {
+            config2 = config;
+
             config?.BindWith(DivaRulesetSettings.UseXBoxButtons, useXB);
             string textureLocation = (useXB.Value) ? "XB/" : "";
 
@@ -167,7 +172,10 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             switch (state)
             {
                 case ArmedState.Hit:
-                    this.ScaleTo(5, 1500, Easing.OutQuint).FadeOut(1500, Easing.OutQuint).Expire();
+                    config2?.BindWith(DivaRulesetSettings.EnableVisualBursts, enableVisualBursts);
+
+                    if(enableVisualBursts.Value)
+                        this.ScaleTo(5, 1500, Easing.OutQuint).FadeOut(1500, Easing.OutQuint).Expire();
                     break;
 
                 case ArmedState.Miss:

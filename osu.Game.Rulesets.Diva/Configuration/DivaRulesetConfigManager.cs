@@ -16,11 +16,13 @@ namespace osu.Game.Rulesets.Diva.Configuration
             base.InitialiseDefaults();
 
             Set(DivaRulesetSettings.UseXBoxButtons, false);
+            Set(DivaRulesetSettings.EnableVisualBursts, true);
         }
     }
 
     public enum DivaRulesetSettings
     {
-        UseXBoxButtons
+        UseXBoxButtons,
+        EnableVisualBursts
     }
 }

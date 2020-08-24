@@ -31,6 +31,11 @@ namespace osu.Game.Rulesets.Diva.UI
                 {
                     LabelText = "Use XBox Button Icons",
                     Bindable = config.GetBindable<bool>(DivaRulesetSettings.UseXBoxButtons)
+                },
+                new SettingsCheckbox
+                {
+                    LabelText = "Enable visual bursts",
+                    Bindable = config.GetBindable<bool>(DivaRulesetSettings.EnableVisualBursts)
                 }
             };
         }
