@@ -4,6 +4,8 @@
 using osu.Game.Rulesets.Judgements;
 using osu.Game.Rulesets.Objects;
 using osu.Game.Rulesets.Objects.Types;
+using osu.Game.Rulesets.Scoring;
+using osu.Game.Rulesets.Diva.Scoring;
 using osuTK;
 
 namespace osu.Game.Rulesets.Diva.Objects
@@ -11,6 +13,7 @@ namespace osu.Game.Rulesets.Diva.Objects
     public class DivaHitObject : HitObject, IHasPosition
     {
         public override Judgement CreateJudgement() => new Judgement();
+        protected override HitWindows CreateHitWindows() => new DivaHitWindows();
 
         public Vector2 Position { get; set; }
 

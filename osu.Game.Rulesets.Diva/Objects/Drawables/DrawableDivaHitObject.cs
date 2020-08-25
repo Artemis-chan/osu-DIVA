@@ -1,6 +1,7 @@
 ﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
+using System;
 using System.Collections.Generic;
 using osu.Framework.Allocation;
 using osu.Framework.Extensions.Color4Extensions;
@@ -17,7 +18,6 @@ using osuTK;
 using osuTK.Graphics;
 using osu.Game.Rulesets.Diva.Configuration;
 using osu.Framework.Bindables;
-using System;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
@@ -131,7 +131,12 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         protected override void CheckForResult(bool userTriggered, double timeOffset)
         {
-            if(Judged || base.Time.Current < HitObject.StartTime) return;
+            Console.WriteLine(timeOffset);
+            if (Judged || base.Time.Current < HitObject.StartTime)
+            {
+                pressed = false;
+                return;
+            }
 
             if (!HitObject.HitWindows.CanBeHit(timeOffset))
             {
@@ -161,7 +166,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         protected override void UpdateInitialTransforms()
         {
             this.FadeInFromZero(time_fadein);
-            this.approachHand.ScaleTo(1.4f, time_fadein, Easing.In);
+            this.approachHand.ScaleTo(2, time_fadein, Easing.In);
 
             this.approachHand.RotateTo(360, time_preempt, Easing.In);
             //this.approachPiece.MoveTo(Vector2.Zero, time_preempt, Easing.None);
@@ -175,7 +180,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                     config2?.BindWith(DivaRulesetSettings.EnableVisualBursts, enableVisualBursts);
 
                     if(enableVisualBursts.Value)
-                        this.ScaleTo(5, 1500, Easing.OutQuint).FadeOut(1500, Easing.OutQuint).Expire();
+                        this.ScaleTo(1.5f, 1500, Easing.OutQuint).FadeOut(1500, Easing.OutQuint).Expire();
                     break;
 
                 case ArmedState.Miss:
