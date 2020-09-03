@@ -16,7 +16,7 @@ namespace osu.Game.Rulesets.Diva.Mods
         {
             ScoreInfo = new ScoreInfo
             {
-                User = new User { Username = "sample" },
+                User = new User { Username = "Autoplay" },
             },
             Replay = new DivaAutoGenerator(beatmap).Generate(),
         };
