@@ -9,6 +9,7 @@ using osu.Game.Rulesets.Objects.Types;
 using osu.Game.Rulesets.Diva.Objects;
 using osuTK;
 using System;
+using System.Threading;
 
 namespace osu.Game.Rulesets.Diva.Beatmaps
 {
@@ -47,8 +48,9 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 
         public override bool CanConvert() => Beatmap.HitObjects.All(h => h is IHasPosition);
 
-        protected override IEnumerable<DivaHitObject> ConvertHitObject(HitObject original, IBeatmap beatmap)
+        protected override IEnumerable<DivaHitObject> ConvertHitObject(HitObject original, IBeatmap beatmap, CancellationToken cancellationToken)
         {
+            //not sure if handling the cancellation is needed, as offical modes doesnt handle *scratches my head* or even its possible
             var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
             yield return new DivaHitObject
             {
@@ -59,7 +61,6 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                 ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
             };
         }
-
         //placeholder
         private DivaAction ValidAction()
         {
