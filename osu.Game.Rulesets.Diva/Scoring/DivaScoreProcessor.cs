@@ -7,6 +7,6 @@ namespace osu.Game.Rulesets.Diva.Scoring
 {
     public class DivaScoreProcessor : ScoreProcessor
     {
-        public override HitWindows CreateHitWindows() => new DivaHitWindows();
+        
     }
 }

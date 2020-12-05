@@ -115,11 +115,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         public override IEnumerable<HitSampleInfo> GetSamples() => new[]
         {
-            new HitSampleInfo
-            {
-                Bank = SampleControlPoint.DEFAULT_BANK,
-                Name = HitSampleInfo.HIT_NORMAL,
-            }
+            new HitSampleInfo(HitSampleInfo.HIT_NORMAL, SampleControlPoint.DEFAULT_BANK)
         };
 
         public override void PlaySamples()
@@ -169,7 +165,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             //this.approachPiece.MoveTo(Vector2.Zero, time_preempt, Easing.None);
         }
 
-        protected override void UpdateStateTransforms(ArmedState state)
+        protected override void UpdateHitStateTransforms(ArmedState state)
         {
             switch (state)
             {
