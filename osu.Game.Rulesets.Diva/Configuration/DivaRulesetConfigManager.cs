@@ -15,8 +15,8 @@ namespace osu.Game.Rulesets.Diva.Configuration
         {
             base.InitialiseDefaults();
 
-            Set(DivaRulesetSettings.UseXBoxButtons, false);
-            Set(DivaRulesetSettings.EnableVisualBursts, true);
+            SetDefault(DivaRulesetSettings.UseXBoxButtons, false);
+            SetDefault(DivaRulesetSettings.EnableVisualBursts, true);
         }
     }
 
