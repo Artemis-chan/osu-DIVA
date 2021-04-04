@@ -1,6 +1,7 @@
 ﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
+using System.Collections.Generic;
 using osu.Game.Beatmaps;
 using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.Diva.Objects;
@@ -12,7 +13,7 @@ namespace osu.Game.Rulesets.Diva.Mods
 {
     public class DivaModAutoplay : ModAutoplay<DivaHitObject>
     {
-        public override Score CreateReplayScore(IBeatmap beatmap) => new Score
+        public override Score CreateReplayScore(IBeatmap beatmap, IReadOnlyList<Mod> mods) => new Score
         {
             ScoreInfo = new ScoreInfo
             {
