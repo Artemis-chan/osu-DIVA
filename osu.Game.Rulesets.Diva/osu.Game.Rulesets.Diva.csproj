@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="Project">
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <AssemblyTitle>osu.Game.Rulesets.Sample</AssemblyTitle>
     <OutputType>Library</OutputType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -13,7 +13,7 @@
     <Folder Include="Resources\Textures" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\osu\osu.Game.Rulesets.Osu\osu.Game.Rulesets.Osu.csproj" />
-    <ProjectReference Include="..\osu\osu.Game\osu.Game.csproj" />
+      <PackageReference Include="ppy.osu.Game" Version="2021.331.0"/>
+    <PackageReference Include="ppy.osu.Game.Rulesets.Osu" Version="2021.331.0"/>
   </ItemGroup>
 </Project>
