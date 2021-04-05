@@ -132,6 +132,11 @@ namespace osu.Game.Rulesets.Diva
             new KeyBinding(InputKey.Z, DivaAction.Triangle),
             new KeyBinding(InputKey.A, DivaAction.Cross),
             new KeyBinding(InputKey.S, DivaAction.Circle),
+            
+            new KeyBinding(InputKey.M, DivaAction.Square),
+            new KeyBinding(InputKey.N, DivaAction.Triangle),
+            new KeyBinding(InputKey.J, DivaAction.Cross),
+            new KeyBinding(InputKey.K, DivaAction.Circle),
         };
 
         public override Drawable CreateIcon() => new Sprite
