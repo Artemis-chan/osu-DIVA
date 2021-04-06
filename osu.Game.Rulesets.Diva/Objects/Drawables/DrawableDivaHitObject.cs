@@ -27,6 +27,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
     {
         private const double time_preempt = 850;
         private const double time_fadein = 300;
+        private const double time_action = 150;
 
         public override bool HandlePositionalInput => false;
 
@@ -142,17 +143,14 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
             var result = HitObject.HitWindows.ResultFor(timeOffset);
 
-            //result = HitResult.Perfect; // for testing cus i'm noob
+            if (result == HitResult.None) return;
 
-            if(result == HitResult.None) return;
-
-            if(pressed)
+            if (pressed && timeOffset > (-time_action))
             {
                 if(validPress)
                     ApplyResult(r => r.Type = result);
-                else if(HitObject.HitWindows.CanBeHit(timeOffset))
+                else
                     ApplyResult(r => r.Type = HitResult.Miss);
-
                 pressed = false;
             }
         }
