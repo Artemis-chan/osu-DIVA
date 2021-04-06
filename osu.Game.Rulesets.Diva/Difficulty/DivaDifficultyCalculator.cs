@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.Diva
             double od = beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty;
 
             double difficulty = 1;
-            
+            //TODO: This will need to be rewritten once we start work on #9
             if (od > 6.0d)
             {
                 difficulty = 4;
