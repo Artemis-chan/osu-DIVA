@@ -52,9 +52,10 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         {
             //not sure if handling the cancellation is needed, as offical modes doesnt handle *scratches my head* or even its possible
             var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
-            
-            //currently press presses are placed in place of sliders as placeholder, but arcade chords are better suited for these
-            if(original is IHasPathWithRepeats)
+
+			//currently press presses are placed in place of sliders as placeholder, but arcade slider are better suited for these
+			//another option would be long sliders: arcade sliders, short sliders: doubles
+			if(original is IHasPathWithRepeats)
             {
 				yield return new DoublePressButton
 				{
