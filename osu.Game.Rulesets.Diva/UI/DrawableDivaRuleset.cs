@@ -30,7 +30,7 @@ namespace osu.Game.Rulesets.Diva.UI
 
         protected override ReplayInputHandler CreateReplayInputHandler(Replay replay) => new DivaFramedReplayInputHandler(replay);
 
-        public override DrawableHitObject<DivaHitObject> CreateDrawableRepresentation(DivaHitObject h) => new DrawableDivaHitObject(h);
+        public override DrawableHitObject<DivaHitObject> CreateDrawableRepresentation(DivaHitObject h) => new DrawableDivaDoubleHitObject(h);
 
         protected override PassThroughInputManager CreateInputManager() => new DivaInputManager(Ruleset?.RulesetInfo);
     }

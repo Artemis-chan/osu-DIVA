@@ -128,15 +128,15 @@ namespace osu.Game.Rulesets.Diva
 
         public override IEnumerable<KeyBinding> GetDefaultKeyBindings(int variant = 0) => new[]
         {
-            new KeyBinding(InputKey.X, DivaAction.Square),
-            new KeyBinding(InputKey.Z, DivaAction.Triangle),
-            new KeyBinding(InputKey.A, DivaAction.Cross),
-            new KeyBinding(InputKey.S, DivaAction.Circle),
+            new KeyBinding(InputKey.A, DivaAction.Square),
+            new KeyBinding(InputKey.W, DivaAction.Triangle),
+            new KeyBinding(InputKey.S, DivaAction.Cross),
+            new KeyBinding(InputKey.D, DivaAction.Circle),
             
-            new KeyBinding(InputKey.M, DivaAction.Square),
-            new KeyBinding(InputKey.N, DivaAction.Triangle),
-            new KeyBinding(InputKey.J, DivaAction.Cross),
-            new KeyBinding(InputKey.K, DivaAction.Circle),
+            new KeyBinding(InputKey.J, DivaAction.Square),
+            new KeyBinding(InputKey.I, DivaAction.Triangle),
+            new KeyBinding(InputKey.K, DivaAction.Cross),
+            new KeyBinding(InputKey.L, DivaAction.Circle),
         };
 
         public override Drawable CreateIcon() => new Sprite

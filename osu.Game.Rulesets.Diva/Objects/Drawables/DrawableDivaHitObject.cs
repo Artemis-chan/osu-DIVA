@@ -33,11 +33,11 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         private readonly Sprite approachHand;
         private readonly ApproachPiece approachPiece;
-        
-        private readonly DivaAction validAction;
 
-        private bool validPress = false;
-        private bool pressed = false;
+		protected readonly DivaAction validAction;
+
+        protected bool validPress = false;
+		protected bool pressed = false;
 
         private BindableBool useXB = new BindableBool(false);
         private BindableBool enableVisualBursts = new BindableBool(true);
@@ -194,7 +194,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                 this.approachPiece.UpdatePos(b);
         }
 
-        public bool OnPressed(DivaAction action)
+        public virtual bool OnPressed(DivaAction action)
         {
             this.Samples.Play();
             
@@ -207,7 +207,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             return true;
         }
 
-        public void OnReleased(DivaAction action)
+        public virtual void OnReleased(DivaAction action)
         {
         }
     }
