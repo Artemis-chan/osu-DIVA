@@ -34,6 +34,8 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 		{
 		}
 
+		protected override string GetTextureLocation() => "Doubles/" + base.GetTextureLocation();
+
 		public override bool OnPressed(DivaAction action)
         {
             this.Samples.Play();

@@ -31,16 +31,16 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         public override bool HandlePositionalInput => false;
 
-        private readonly Sprite approachHand;
-        private readonly ApproachPiece approachPiece;
+        protected readonly Sprite approachHand;
+        protected readonly ApproachPiece approachPiece;
 
 		protected readonly DivaAction validAction;
 
         protected bool validPress = false;
 		protected bool pressed = false;
 
-        private BindableBool useXB = new BindableBool(false);
-        private BindableBool enableVisualBursts = new BindableBool(true);
+        protected BindableBool useXB = new BindableBool(false);
+        protected BindableBool enableVisualBursts = new BindableBool(true);
         
         protected override JudgementResult CreateResult(Judgement judgement) => new DivaJudgementResult(HitObject, judgement);
 
@@ -82,7 +82,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         {
             config?.BindWith(DivaRulesetSettings.UseXBoxButtons, useXB);
             config?.BindWith(DivaRulesetSettings.EnableVisualBursts, enableVisualBursts);
-            string textureLocation = (useXB.Value) ? "XB/" : "";
+            string textureLocation = GetTextureLocation();
 
             AddInternal(new Sprite
             {
@@ -98,7 +98,9 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         }
 
-        public override double LifetimeStart
+		protected virtual string GetTextureLocation() => (useXB.Value) ? "XB/" : "";
+
+		public override double LifetimeStart
         {
             get => base.LifetimeStart;
             set
