@@ -15,10 +15,16 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 {
     public class DivaBeatmapConverter : BeatmapConverter<DivaHitObject>
     {
-        //todo:
-        //make single position bursts to a line pattern
-        //every approach piece of a combo will come from one direction
-        //create patterns of same button
+		//todo:
+		//make single position bursts to a line pattern
+		//every approach piece of a combo will come from one direction
+		//create patterns of same button
+
+		public int TargetButtons;
+
+		private DivaAction prevAction = DivaAction.Triangle;
+		private Vector2 prevObjectPos = Vector2.Zero;
+        //these variables were at the end of the class, such heresy had i done
 
         private const float approach_piece_distance = 1200;
 
@@ -99,9 +105,5 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             return dir.Normalized() * approach_piece_distance;            
         }        
 
-        public int TargetButtons;
-
-        private DivaAction prevAction = DivaAction.Triangle;
-        private Vector2 prevObjectPos = Vector2.Zero;
     }
 }

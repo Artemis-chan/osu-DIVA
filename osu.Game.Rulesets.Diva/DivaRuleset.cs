@@ -117,6 +117,12 @@ namespace osu.Game.Rulesets.Diva
                     return new Mod[]
                     {
                         new OsuModDifficultyAdjust(),
+                        new MultiMod(
+                            new DivaModKey1(),
+                            new DivaModKey2(),
+                            new DivaModKey3(),
+                            new DivaModKey4()
+                        ),
                     };
 
                 default:
