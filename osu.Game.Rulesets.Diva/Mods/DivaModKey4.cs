@@ -6,7 +6,7 @@ namespace osu.Game.Rulesets.Diva.Mods
 	public class DivaModKey4 : DivaKeyMod
 	{
 		public override int KeyCount => 4;
-		public override string Name => "Four Button";
+		public override string Name => "Four Buttons";
 		public override string Acronym => "4B";
 		public override string Description => @"Play with four buttons.";
 	}
