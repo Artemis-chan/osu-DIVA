@@ -30,7 +30,16 @@ namespace osu.Game.Rulesets.Diva.UI
 
         protected override ReplayInputHandler CreateReplayInputHandler(Replay replay) => new DivaFramedReplayInputHandler(replay);
 
-        public override DrawableHitObject<DivaHitObject> CreateDrawableRepresentation(DivaHitObject h) => new DrawableDivaHitObject(h);
+        public override DrawableHitObject<DivaHitObject> CreateDrawableRepresentation(DivaHitObject h)
+        {
+            //not sure how other rulessets do this so going with this for now
+			switch(h){
+                case DoublePressButton:
+					return new DrawableDivaDoubleHitObject(h);
+                default:
+					return new DrawableDivaHitObject(h);
+			}
+		}
 
         protected override PassThroughInputManager CreateInputManager() => new DivaInputManager(Ruleset?.RulesetInfo);
     }

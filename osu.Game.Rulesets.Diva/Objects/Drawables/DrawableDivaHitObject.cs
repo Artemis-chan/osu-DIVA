@@ -31,16 +31,16 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         public override bool HandlePositionalInput => false;
 
-        private readonly Sprite approachHand;
-        private readonly ApproachPiece approachPiece;
-        
-        private readonly DivaAction validAction;
+        protected readonly Sprite approachHand;
+        protected readonly ApproachPiece approachPiece;
 
-        private bool validPress = false;
-        private bool pressed = false;
+		protected readonly DivaAction validAction;
 
-        private BindableBool useXB = new BindableBool(false);
-        private BindableBool enableVisualBursts = new BindableBool(true);
+        protected bool validPress = false;
+		protected bool pressed = false;
+
+        protected BindableBool useXB = new BindableBool(false);
+        protected BindableBool enableVisualBursts = new BindableBool(true);
         
         protected override JudgementResult CreateResult(Judgement judgement) => new DivaJudgementResult(HitObject, judgement);
 
@@ -82,7 +82,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         {
             config?.BindWith(DivaRulesetSettings.UseXBoxButtons, useXB);
             config?.BindWith(DivaRulesetSettings.EnableVisualBursts, enableVisualBursts);
-            string textureLocation = (useXB.Value) ? "XB/" : "";
+            string textureLocation = GetTextureLocation();
 
             AddInternal(new Sprite
             {
@@ -98,7 +98,9 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         }
 
-        public override double LifetimeStart
+		protected virtual string GetTextureLocation() => (useXB.Value) ? "XB/" : "";
+
+		public override double LifetimeStart
         {
             get => base.LifetimeStart;
             set
@@ -194,7 +196,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                 this.approachPiece.UpdatePos(b);
         }
 
-        public bool OnPressed(DivaAction action)
+        public virtual bool OnPressed(DivaAction action)
         {
             this.Samples.Play();
             
@@ -207,7 +209,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             return true;
         }
 
-        public void OnReleased(DivaAction action)
+        public virtual void OnReleased(DivaAction action)
         {
         }
     }

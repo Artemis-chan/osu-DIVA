@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/osu.Game.Rulesets.Diva.Tests/bin/Debug/netcoreapp3.1/osu.Game.Rulesets.Diva.Tests.dll",
+            "program": "${workspaceFolder}/osu.Game.Rulesets.Diva.Tests/bin/Debug/net5.0/osu.Game.Rulesets.Diva.Tests.dll",
             "args": [],
             "cwd": "${workspaceFolder}/osu.Game.Rulesets.Diva.Tests",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
