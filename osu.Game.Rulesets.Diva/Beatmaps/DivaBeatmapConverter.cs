@@ -52,14 +52,31 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         {
             //not sure if handling the cancellation is needed, as offical modes doesnt handle *scratches my head* or even its possible
             var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
-            yield return new DivaHitObject
+            
+            //currently press presses are placed in place of sliders as placeholder, but arcade chords are better suited for these
+            if(original is IHasPathWithRepeats)
             {
-                Samples = original.Samples,
-                StartTime = original.StartTime,
-                Position = pos,
-                ValidAction = ValidAction(),
-                ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
-            };
+				yield return new DoublePressButton
+				{
+					Samples = original.Samples,
+					StartTime = original.StartTime,
+					Position = pos,
+					ValidAction = ValidAction(),
+					ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
+				};
+			}
+            else
+            {
+				yield return new DivaHitObject
+				{
+					Samples = original.Samples,
+					StartTime = original.StartTime,
+					Position = pos,
+					ValidAction = ValidAction(),
+					ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
+				};
+            }
+
         }
         //placeholder
         private DivaAction ValidAction()
