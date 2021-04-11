@@ -21,6 +21,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         //create patterns of same button
 
         public int TargetButtons;
+        public bool AllowDoubles = true;
 
         private DivaAction prevAction = DivaAction.Triangle;
         private Vector2 prevObjectPos = Vector2.Zero;
@@ -61,7 +62,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 
 			//currently press presses are placed in place of sliders as placeholder, but arcade slider are better suited for these
 			//another option would be long sliders: arcade sliders, short sliders: doubles
-			if(original is IHasPathWithRepeats)
+			if(AllowDoubles && original is IHasPathWithRepeats)
             {
 				yield return new DoublePressButton
 				{
