@@ -10,6 +10,7 @@ namespace osu.Game.Rulesets.Diva.Mods
 	{
 		public override string Name => "No Doubles";
 		public override string Acronym => "ND";
+        public override string Description => @"Only one button at a time.";
 		public override ModType Type => ModType.Conversion;
 		public override double ScoreMultiplier => 0.667;
 		public override bool Ranked => true;
