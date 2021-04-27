@@ -1,0 +1,14 @@
+#
+# This Dependabot config will automatically PR new versions of the osu!
+# game dependency, allowing us to rebase to the most fresh version.
+#
+# Note: DO NOT bypass workflows/debug.yml as it ensures we don't push
+# broken versions!
+#
+
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/osu.Game.Rulesets.Diva"
+    schedule:
+        interval: "daily"
