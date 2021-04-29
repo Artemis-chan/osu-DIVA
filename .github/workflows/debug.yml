@@ -1,0 +1,32 @@
+#
+# This workflow triggers at every commit push that changes code.
+# This is useful for keeping Dependabot from pushing broken dependencies.
+#
+
+name: dotnet-debug
+
+on:
+    push:
+        paths:
+            - '**/*.cs'
+            - '**/*.csproj'
+
+jobs:
+    dotnet-test:
+        name: Check if the project can still build
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - uses: actions/setup-dotnet@v1
+            with:
+                dotnet-version: '5.0.x'
+          - name: Build the debug DLL
+            run: dotnet build
+          - name: Upload artifact for further testing
+            uses: actions/upload-artifact@v2
+            with:
+                name: release
+                path: osu.Game.Rulesets.Diva/bin
+

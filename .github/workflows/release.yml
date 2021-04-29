@@ -1,0 +1,32 @@
+#
+# This workflow triggers whenever a new tag is created which begins with v
+# For example, a tag v42.0.1 will create a new version.
+#
+
+name: dotnet-release
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    dotnet-build:
+        name: Generate release assets
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - uses: actions/setup-dotnet@v1
+            with:
+                dotnet-version: '5.0.x'
+          - name: Build the release DLL
+            run: dotnet publish -c Release osu.Game.Rulesets.Diva
+          - name: Upload as asset
+            uses: softprops/action-gh-release@v1
+            with:
+                files: osu.Game.Rulesets.Diva/bin/Release/net5.0/osu.Game.Rulesets.Diva.dll
+            env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
