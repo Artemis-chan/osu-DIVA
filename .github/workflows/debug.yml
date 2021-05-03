@@ -24,6 +24,8 @@ jobs:
                 dotnet-version: '5.0.x'
           - name: Build the debug DLL
             run: dotnet build
+          - name: Give unit tests a spin
+            run: dotnet test --no-build
           - name: Upload artifact for further testing
             uses: actions/upload-artifact@v2
             with:
