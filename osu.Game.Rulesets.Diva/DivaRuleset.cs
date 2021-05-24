@@ -123,6 +123,7 @@ namespace osu.Game.Rulesets.Diva
                             new DivaModKey3(),
                             new DivaModKey4()
                         ),
+                        new DivaModNoDoubles(),
                     };
 
                 default:
