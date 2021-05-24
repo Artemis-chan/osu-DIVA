@@ -14,7 +14,7 @@ namespace osu.Game.Rulesets.Diva.Mods
 		public override string Acronym => Name;
 		public abstract int KeyCount { get; }
 		public override ModType Type => ModType.Conversion;
-		public override double ScoreMultiplier => 1; // TODO: Implement the Diva key mod score multiplier
+		public override double ScoreMultiplier => 1;
 		public override bool Ranked => true;
 
 		public void ApplyToBeatmapConverter(IBeatmapConverter beatmapConverter)
