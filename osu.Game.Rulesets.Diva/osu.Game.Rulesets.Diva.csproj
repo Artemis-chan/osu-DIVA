@@ -13,7 +13,7 @@
     <Folder Include="Resources\Textures" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ppy.osu.Game" Version="2021.523.0" />
+    <PackageReference Include="ppy.osu.Game" Version="2021.524.0" />
     <PackageReference Include="ppy.osu.Game.Rulesets.Osu" Version="2021.523.0" />
   </ItemGroup>
 </Project>
