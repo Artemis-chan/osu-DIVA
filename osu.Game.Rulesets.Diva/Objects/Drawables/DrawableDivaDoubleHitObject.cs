@@ -27,11 +27,13 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 	{
 		private const int MAX_COUNT = 2;
 		private List<DivaAction> inputs = new List<DivaAction>();
+		private readonly DivaAction doubleAction;
 		private int inputCount = 0;
 
 		public DrawableDivaDoubleHitObject(DivaHitObject hitObject)
 			: base(hitObject)
 		{
+			doubleAction = (hitObject as DoublePressButton).DoubleAction;
 		}
 
 		protected override string GetTextureLocation() => "Doubles/" + base.GetTextureLocation();
@@ -40,26 +42,35 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         {
             this.Samples.Play();
 
-			if (Judged || inputCount > 1)
+			if (Judged || inputCount > 2)
                 return false;
 
 
-			inputs.Add(action);
-			inputCount++;
+			if(action == validAction || action == doubleAction)
+				inputCount++;
 
 			if(inputCount == 2)
-            {
+			{
 				pressed = true;
-				validPress = (inputs[0] == validAction && inputs[1] == validAction);
+				validPress = true;
 			}
+
+			// inputs.Add(action);
+			// inputCount++;
+
+			// if(inputCount == 2)
+			// {
+			// 	pressed = true;
+			// 	validPress = inputs.Contains(validAction) && inputs.Contains(doubleAction);
+			// }
 
 			return true;
         }
 
         public override void OnReleased(DivaAction action)
         {
-            inputs.Remove(action);
-			inputCount--;
+            // inputs.Remove(action);
+			// inputCount--;
 		}
 
 	}

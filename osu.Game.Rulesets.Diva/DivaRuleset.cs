@@ -140,10 +140,10 @@ namespace osu.Game.Rulesets.Diva
             new KeyBinding(InputKey.S, DivaAction.Cross),
             new KeyBinding(InputKey.D, DivaAction.Circle),
             
-            new KeyBinding(InputKey.J, DivaAction.Square),
-            new KeyBinding(InputKey.I, DivaAction.Triangle),
-            new KeyBinding(InputKey.K, DivaAction.Cross),
-            new KeyBinding(InputKey.L, DivaAction.Circle),
+            new KeyBinding(InputKey.Left, DivaAction.Left),
+            new KeyBinding(InputKey.Up, DivaAction.Up),
+            new KeyBinding(InputKey.Right, DivaAction.Right),
+            new KeyBinding(InputKey.Down, DivaAction.Down)
         };
 
         public override Drawable CreateIcon() => new Sprite

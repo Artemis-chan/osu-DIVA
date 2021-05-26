@@ -70,6 +70,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
 					StartTime = original.StartTime,
 					Position = pos,
 					ValidAction = ValidAction(),
+                    DoubleAction = DoubleAction(prevAction),
 					ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
 				};
 			}
@@ -86,6 +87,15 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             }
 
         }
+
+		private static DivaAction DoubleAction(DivaAction ac) => ac switch
+		{
+			DivaAction.Circle => DivaAction.Right,
+			DivaAction.Cross => DivaAction.Down,
+			DivaAction.Square => DivaAction.Left,
+			_ => DivaAction.Up
+		};
+
         //placeholder
         private DivaAction ValidAction()
         {

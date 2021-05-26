@@ -34,13 +34,21 @@ namespace osu.Game.Rulesets.Diva.Replays
                 var hitTime = hitObject.StartTime + hitObject.HitWindows.WindowFor(HitResult.Perfect);
                 if (i > 0)
                 {
-                    Frames.Add(new DivaReplayFrame((prevTime + hitTime) / 2d));
+                    Frames.Add(new DivaReplayFrame(Lerp(prevTime, hitTime, 0.1)));
                 }
-                Frames.Add(new DivaReplayFrame(hitTime, hitObject.ValidAction));
+                
+                if(hitObject is DoublePressButton dButt)
+				    Frames.Add(new DivaReplayFrame(hitTime, hitObject.ValidAction, dButt.DoubleAction));
+                else
+                    Frames.Add(new DivaReplayFrame(hitTime, hitObject.ValidAction));
+
                 prevTime = hitTime;
             }
 
             return Replay;
         }
-    }
+
+		double Lerp(double a, double b, double t)
+			=> a + (b - a) * t;
+	}
 }
