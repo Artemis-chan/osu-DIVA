@@ -97,7 +97,7 @@ namespace osu.Game.Rulesets.Diva
             switch (type)
             {
                 case ModType.Automation:
-                    return new[] { new DivaModAutoplay() };
+                    return new Mod[] { new DivaModAutoplay() };
 
                 case ModType.DifficultyReduction:
                     return new Mod[]

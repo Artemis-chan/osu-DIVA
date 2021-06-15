@@ -11,7 +11,7 @@ using osu.Game.Users;
 
 namespace osu.Game.Rulesets.Diva.Mods
 {
-    public class DivaModAutoplay : ModAutoplay<DivaHitObject>
+    public class DivaModAutoplay : ModAutoplay
     {
         public override Score CreateReplayScore(IBeatmap beatmap, IReadOnlyList<Mod> mods) => new Score
         {
