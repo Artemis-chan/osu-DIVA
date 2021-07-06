@@ -12,4 +12,8 @@ updates:
     directory: "/osu.Game.Rulesets.Diva"
     schedule:
         interval: "daily"
-        
+    ignore:
+      - dependency-name: "ppy.osu.Game.Rulesets.Osu"
+        # This version spec is tightly linked with osu.Game
+        # We cannot allow it to desync, so we drop the version
+        # from the csproj and tell dependabot to not touch it, ever.
