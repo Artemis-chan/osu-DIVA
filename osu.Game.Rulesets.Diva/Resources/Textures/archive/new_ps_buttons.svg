@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="drawing-1.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient2277"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#010000;stop-opacity:1;"
+         offset="0"
+         id="stop2275" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient837"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ff8585;stop-opacity:1;"
+         offset="0"
+         id="stop835" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient831"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#010000;stop-opacity:1;"
+         offset="0"
+         id="stop829" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2964"
+       x="-0.13200002"
+       width="1.264"
+       y="-0.13199998"
+       height="1.264">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.8459173"
+         id="feGaussianBlur2966" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2972"
+       x="-0.13199999"
+       width="1.264"
+       y="-0.13200001"
+       height="1.264">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.829152"
+         id="feGaussianBlur2974" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3216"
+       x="-0.132"
+       width="1.264"
+       y="-0.132"
+       height="1.264">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.6095248"
+         id="feGaussianBlur3218" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3310"
+       x="-0.12289365"
+       width="1.2457873"
+       y="-0.14190536"
+       height="1.2838107">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.2890467"
+         id="feGaussianBlur3312" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.33748762"
+     inkscape:cx="-96.632145"
+     inkscape:cy="316.55252"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:lockguides="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#949494;fill-opacity:1;stroke:#ffffff;stroke-width:7;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.95454544;paint-order:markers stroke fill"
+       id="rect3100"
+       width="222.67303"
+       height="210.32309"
+       x="-350.02582"
+       y="137.75493" />
+    <path
+       style="opacity:1;fill:#f3456a;fill-opacity:1;stroke:#010000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="M 50.217102,7.9390902 A 34.962795,34.962795 0 0 0 14.893161,42.454295 34.962795,34.962795 0 0 0 49.325168,77.858852 34.962795,34.962795 0 0 0 84.810857,43.510046 l 0.0041,-0.328663 A 34.962795,34.962795 0 0 0 50.217102,7.9390902 Z M 49.693619,21.545494 A 20.977678,20.977678 0 0 1 70.45256,42.690973 l -0.0026,0.197405 A 20.977678,20.977678 0 0 1 49.158769,63.497457 20.977678,20.977678 0 0 1 28.499566,42.254307 20.977678,20.977678 0 0 1 49.693619,21.545494 Z"
+       id="path819"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\CircleMove.png"
+       inkscape:export-xdpi="171.79402"
+       inkscape:export-ydpi="171.79402" />
+    <path
+       sodipodi:nodetypes="cccccc"
+       id="path2705"
+       d="m 144.61487,9.9647553 c -19.27647,-0.200691 -35.0782,15.2392577 -35.32394,34.5152037 -0.24577,19.275751 15.15689,35.113471 34.432,35.404571 19.2753,0.29124 35.14937,-15.07427 35.4857,-34.348821 l 0.004,-0.32866 C 179.36778,25.930476 163.89104,10.165405 144.61487,9.9647553 Z"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter2964)"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\CircleStat.png"
+       inkscape:export-xdpi="171.79402"
+       inkscape:export-ydpi="171.79402" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 144.61487,9.9647553 c -19.27647,-0.200691 -35.0782,15.2392577 -35.32394,34.5152037 -0.24577,19.275751 15.15689,35.113471 34.432,35.404571 19.2753,0.29124 35.14937,-15.07427 35.4857,-34.348821 l 0.004,-0.32866 C 179.36778,25.930476 163.89104,10.165405 144.61487,9.9647553 Z"
+       id="path819-0-1"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\CircleStat.png"
+       inkscape:export-xdpi="171.79402"
+       inkscape:export-ydpi="171.79402" />
+    <path
+       style="opacity:1;fill:#79a7ef;fill-opacity:0.99607843;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 32.811237,98.370238 -14.14839,14.148402 20.661851,20.66231 -20.661851,20.66185 14.14839,14.14838 20.66185,-20.66184 L 74.1354,167.99118 88.283791,153.8428 67.621477,133.18095 88.283791,112.51864 74.1354,98.370238 53.473087,119.03256 Z"
+       id="rect2875"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\CrossMove.png"
+       inkscape:export-xdpi="168.7084"
+       inkscape:export-ydpi="168.7084" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:7;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.95454544;paint-order:markers stroke fill;filter:url(#filter2972)"
+       d="m 123.68744,97.421338 -14.14839,14.148402 20.66185,20.66231 -20.66185,20.66185 14.14839,14.14838 20.66185,-20.66184 20.66232,20.66184 L 179.16,152.8939 158.49768,132.23205 179.16,111.56974 165.01161,97.421338 144.34929,118.08366 Z"
+       id="path2918"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\CrossStat.png"
+       inkscape:export-xdpi="144.31673"
+       inkscape:export-ydpi="144.31673" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2916"
+       d="m 123.68744,97.42134 -14.14839,14.1484 20.66185,20.66231 -20.66185,20.66185 14.14839,14.14838 20.66185,-20.66184 20.66232,20.66184 L 179.16,152.8939 158.49768,132.23205 179.16,111.56974 165.01161,97.42134 144.34929,118.08366 Z"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\CrossStat.png"
+       inkscape:export-xdpi="144.31673"
+       inkscape:export-ydpi="144.31673" />
+    <path
+       style="opacity:1;fill:#d07fc2;fill-opacity:1;stroke:#000000;stroke-width:15.11811066;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="M 88.015625 750.45703 L 88.015625 998.49805 L 336.05664 998.49805 L 336.05664 750.45703 L 88.015625 750.45703 z M 155.99805 818.43945 L 268.07422 818.43945 L 268.07422 930.51562 L 155.99805 930.51562 L 155.99805 818.43945 z "
+       transform="scale(0.26458333)"
+       id="rect3102"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\SquareMove.png"
+       inkscape:export-xdpi="182.39912"
+       inkscape:export-ydpi="182.39912" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter3216)"
+       id="rect3106"
+       width="65.627724"
+       height="65.627724"
+       x="112.4321"
+       y="197.45786"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\SquareStat.png"
+       inkscape:export-xdpi="153.09793"
+       inkscape:export-ydpi="153.09793" />
+    <rect
+       y="197.45786"
+       x="112.4321"
+       height="65.627724"
+       width="65.627724"
+       id="rect3104"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\SquareStat.png"
+       inkscape:export-xdpi="153.09793"
+       inkscape:export-ydpi="153.09793" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#61de93;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path3224"
+       sodipodi:sides="3"
+       sodipodi:cx="57.930325"
+       sodipodi:cy="333.31039"
+       sodipodi:r1="48.359516"
+       sodipodi:r2="24.179758"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 99.810894,357.49015 -83.761139,0 41.88057,-72.53927 z"
+       inkscape:transform-center-y="-13.970862"
+       transform="matrix(1.000989,0,0,1.1555858,-24.360644,-48.600639)"
+       inkscape:transform-center-x="-9.509468e-006"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\TriangleMove.png"
+       inkscape:export-xdpi="139.93121"
+       inkscape:export-ydpi="139.93121" />
+    <path
+       inkscape:transform-center-y="-13.517903"
+       d="m 198.76364,357.21299 -83.76114,0 41.88057,-72.53927 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.5707963"
+       sodipodi:arg1="0.52359878"
+       sodipodi:r2="24.179758"
+       sodipodi:r1="48.359516"
+       sodipodi:cy="333.03323"
+       sodipodi:cx="156.88307"
+       sodipodi:sides="3"
+       id="path3228"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter3310)"
+       sodipodi:type="star"
+       transform="matrix(0.99704879,0,0,1.1181142,2.0309546,-26.673316)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\TriangleStat.png"
+       inkscape:export-xdpi="122.06773"
+       inkscape:export-ydpi="122.06773" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path3230"
+       sodipodi:sides="3"
+       sodipodi:cx="156.88307"
+       sodipodi:cy="333.03323"
+       sodipodi:r1="48.359516"
+       sodipodi:r2="24.179758"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 198.76364,357.21299 -83.76114,0 41.88057,-72.53927 z"
+       inkscape:transform-center-y="-14.308003"
+       transform="matrix(0.99480068,0,0,1.1834846,2.3836638,-50.086977)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\TriangleStat.png"
+       inkscape:export-xdpi="122.06773"
+       inkscape:export-ydpi="122.06773" />
+  </g>
+</svg>
