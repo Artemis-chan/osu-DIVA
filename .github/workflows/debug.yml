@@ -19,11 +19,29 @@ jobs:
           - name: Checkout code
             uses: actions/checkout@v2
 
-          - uses: actions/setup-dotnet@v1
+          - name: Install .NET Core
+            uses: actions/setup-dotnet@v1
             with:
                 dotnet-version: '5.0.x'
           - name: Build the debug DLL
+            id: build
             run: dotnet build
+            continue-on-error: true
+          - name: Open an issue if bump fails
+            id: issue
+            if: ${{ steps.build.outcome == failure && github.actor == "dependabot" }}
+            uses: rishabhgupta/git-action-issue@v2
+            with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                title: Incompatibility with latest version of osu!
+                body: |
+                    Dependabot tried to build this project against the latest version of osu!, but failed with the following result:
+                    ```
+                    ${{join(steps.build.outputs.*, '\n')}}
+                    ```
+                run: |
+                    echo "Opened ${{ steps.issue.outputs.issue }}"
+                    exit 1
           - name: Give unit tests a spin
             run: dotnet test --no-build
           - name: Upload artifact for further testing
