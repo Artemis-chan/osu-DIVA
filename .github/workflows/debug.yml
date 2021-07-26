@@ -29,7 +29,7 @@ jobs:
             continue-on-error: true
           - name: Open an issue if bump fails
             id: issue
-            if: ${{ steps.build.outcome == failure && github.actor == "dependabot" }}
+            if: ${{ steps.build.outcome == "failure" && github.actor == "dependabot" }}
             uses: rishabhgupta/git-action-issue@v2
             with:
                 token: ${{ secrets.GITHUB_TOKEN }}
