@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="drawing-1.svg">
+   sodipodi:docname="new_ps_buttons.svg">
   <defs
      id="defs2">
     <linearGradient
@@ -95,6 +95,58 @@
          stdDeviation="4.2890467"
          id="feGaussianBlur3312" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter951"
+       x="-0.16113198"
+       width="1.322264"
+       y="-0.11178902"
+       height="1.223578">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.9968629"
+         id="feGaussianBlur953" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter955"
+       x="-0.15415068"
+       width="1.3083014"
+       y="-0.11541539"
+       height="1.2308308">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.0940791"
+         id="feGaussianBlur957" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter959"
+       x="-0.14775135"
+       width="1.2955027"
+       y="-0.11928352"
+       height="1.238567">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.197777"
+         id="feGaussianBlur961" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter967"
+       x="-0.15270838"
+       width="1.3054168"
+       y="-0.11623736"
+       height="1.2324747">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.1161149"
+         id="feGaussianBlur969" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -103,9 +155,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.33748762"
-     inkscape:cx="-96.632145"
-     inkscape:cy="316.55252"
+     inkscape:zoom="0.77054642"
+     inkscape:cx="186.3734"
+     inkscape:cy="-750.41272"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -114,7 +166,8 @@
      inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -123,7 +176,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -132,12 +185,27 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:#949494;fill-opacity:1;stroke:#ffffff;stroke-width:7;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.95454544;paint-order:markers stroke fill"
+       style="opacity:1;fill:#949494;fill-opacity:1;stroke:#ffffff;stroke-width:23.03000069;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.95454544;paint-order:markers stroke fill"
        id="rect3100"
-       width="222.67303"
-       height="210.32309"
-       x="-350.02582"
-       y="137.75493" />
+       width="787.13519"
+       height="689.52905"
+       x="-942.81714"
+       y="229.53685" />
+    <g
+       transform="translate(60.285207,-79.466869)"
+       id="g893"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter951)"
+       aria-label="B"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\CircleStat.png"
+       inkscape:export-xdpi="161.3219"
+       inkscape:export-ydpi="161.3219">
+      <path
+         sodipodi:nodetypes="csccscsccscc"
+         inkscape:connector-curvature="0"
+         id="path891"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 292.75141,10.357758 h 21.96506 c 5.15346,0 9.03427,0.408506 11.64242,1.225518 2.63957,0.817012 4.83922,2.608154 6.59894,5.373425 1.79114,2.765271 2.68671,6.206148 2.68671,10.322631 0,7.19599 -3.06379,11.81525 -9.19138,13.85778 7.29026,2.57673 10.93539,7.840172 10.93539,15.790327 0,4.17933 -0.98984,7.714478 -2.96953,10.605443 -1.97968,2.859542 -4.43071,4.776378 -7.3531,5.750508 -2.89097,0.942706 -7.00745,1.414059 -12.34945,1.414059 h -21.96506 z" />
+    </g>
     <path
        style="opacity:1;fill:#f3456a;fill-opacity:1;stroke:#010000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        d="M 50.217102,7.9390902 A 34.962795,34.962795 0 0 0 14.893161,42.454295 34.962795,34.962795 0 0 0 49.325168,77.858852 34.962795,34.962795 0 0 0 84.810857,43.510046 l 0.0041,-0.328663 A 34.962795,34.962795 0 0 0 50.217102,7.9390902 Z M 49.693619,21.545494 A 20.977678,20.977678 0 0 1 70.45256,42.690973 l -0.0026,0.197405 A 20.977678,20.977678 0 0 1 49.158769,63.497457 20.977678,20.977678 0 0 1 28.499566,42.254307 20.977678,20.977678 0 0 1 49.693619,21.545494 Z"
@@ -217,23 +285,10 @@
        inkscape:export-xdpi="153.09793"
        inkscape:export-ydpi="153.09793" />
     <path
-       sodipodi:type="star"
-       style="opacity:1;fill:#61de93;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       style="opacity:1;fill:#61de93;fill-opacity:1;stroke:#000000;stroke-width:16.25972748;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="M 127.09375 1060.8555 L -31.351562 1377.6758 L 285.53906 1377.6758 L 127.09375 1060.8555 z M 127.09375 1189.8359 L 188.78125 1313.1855 L 65.40625 1313.1855 L 127.09375 1189.8359 z "
+       transform="scale(0.26458333)"
        id="path3224"
-       sodipodi:sides="3"
-       sodipodi:cx="57.930325"
-       sodipodi:cy="333.31039"
-       sodipodi:r1="48.359516"
-       sodipodi:r2="24.179758"
-       sodipodi:arg1="0.52359878"
-       sodipodi:arg2="1.5707963"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 99.810894,357.49015 -83.761139,0 41.88057,-72.53927 z"
-       inkscape:transform-center-y="-13.970862"
-       transform="matrix(1.000989,0,0,1.1555858,-24.360644,-48.600639)"
-       inkscape:transform-center-x="-9.509468e-006"
        inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\TriangleMove.png"
        inkscape:export-xdpi="139.93121"
        inkscape:export-ydpi="139.93121" />
@@ -277,5 +332,241 @@
        inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\TriangleStat.png"
        inkscape:export-xdpi="122.06773"
        inkscape:export-ydpi="122.06773" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f3456a;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       x="208.57422"
+       y="76.067566"
+       id="text849"><tspan
+         sodipodi:role="line"
+         id="tspan847"
+         x="208.57422"
+         y="76.067566"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#f3456a;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke">B</tspan></text>
+    <g
+       aria-label="B"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text853"
+       transform="translate(60.285207,-79.466869)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\CircleStat.png"
+       inkscape:export-xdpi="161.3219"
+       inkscape:export-ydpi="161.3219">
+      <path
+         d="m 292.75141,10.357758 h 21.96506 c 5.15346,0 9.03427,0.408506 11.64242,1.225518 2.63957,0.817012 4.83922,2.608154 6.59894,5.373425 1.79114,2.765271 2.68671,6.206148 2.68671,10.322631 0,7.19599 -3.06379,11.81525 -9.19138,13.85778 7.29026,2.57673 10.93539,7.840172 10.93539,15.790327 0,4.17933 -0.98984,7.714478 -2.96953,10.605443 -1.97968,2.859542 -4.43071,4.776378 -7.3531,5.750508 -2.89097,0.942706 -7.00745,1.414059 -12.34945,1.414059 h -21.96506 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path855"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="csccscsccscc" />
+    </g>
+    <g
+       id="g897"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter955)"
+       aria-label="Y"
+       transform="translate(56.859917,-26.032251)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\TriangleStat.png"
+       inkscape:export-xdpi="160.40273"
+       inkscape:export-ydpi="160.40273">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path895"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 296.95326,93.249924 c 16.03367,0 48.17228,0 48.17228,0 l -17.86428,37.142616 v 27.19707 h -14.14059 v -27.19707 z" />
+    </g>
+    <text
+       id="text860"
+       y="159.64479"
+       x="222.27541"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f2fa8b;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#f2fa8b;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;"
+         y="159.64479"
+         x="222.27541"
+         id="tspan858"
+         sodipodi:role="line">Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#69f572;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;"
+       x="222.96046"
+       y="256.92319"
+       id="text864"><tspan
+         sodipodi:role="line"
+         id="tspan862"
+         x="222.96046"
+         y="256.92319"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#69f572;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;">A</tspan></text>
+    <g
+       id="g901"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter959)"
+       aria-label="A"
+       transform="translate(46.584027,11.646007)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\CrossStat.png"
+       inkscape:export-xdpi="159.36951"
+       inkscape:export-ydpi="159.36951">
+      <path
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="path899"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 320.55246,189.1582 h 14.23486 l 18.38277,64.33969 h -14.47054 l -3.2052,-13.29215 h -18.09996 l -3.15806,13.29215 h -13.00935 z" />
+    </g>
+    <text
+       id="text868"
+       y="356.94183"
+       x="224.33057"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#78a7ef;fill-opacity:0.99607843;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#78a7ef;fill-opacity:0.99607843;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;"
+         y="356.94183"
+         x="224.33057"
+         id="tspan866"
+         sodipodi:role="line">X</tspan></text>
+    <g
+       id="g905"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter967)"
+       aria-label="X"
+       transform="translate(65.765687,53.434619)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\SquareStat.png"
+       inkscape:export-xdpi="160.15732"
+       inkscape:export-ydpi="160.15732">
+      <path
+         id="path903"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 300.84348,289.17685 h 15.7432 l 7.68305,16.73303 8.10727,-16.73303 h 13.52784 l -15.17757,29.08248 17.15725,35.25721 H 332.377 l -9.37992,-21.02235 -10.55831,21.02235 h -13.52783 l 17.67574,-32.99471 z"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="Y"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text872"
+       transform="translate(56.859917,-26.032251)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\TriangleStat.png"
+       inkscape:export-xdpi="160.40273"
+       inkscape:export-ydpi="160.40273">
+      <path
+         d="m 296.95326,93.249924 c 16.03367,0 48.17228,0 48.17228,0 l -17.86428,37.142616 v 27.19707 h -14.14059 v -27.19707 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path888"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+    <g
+       aria-label="A"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text876"
+       transform="translate(46.584027,11.646007)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\CrossStat.png"
+       inkscape:export-xdpi="159.36951"
+       inkscape:export-ydpi="159.36951">
+      <path
+         d="m 320.55246,189.1582 h 14.23486 l 18.38277,64.33969 h -14.47054 l -3.2052,-13.29215 h -18.09996 l -3.15806,13.29215 h -13.00935 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path885"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccc" />
+    </g>
+    <g
+       aria-label="X"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text880"
+       transform="translate(65.765687,53.434619)"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\XB\SquareStat.png"
+       inkscape:export-xdpi="160.15732"
+       inkscape:export-ydpi="160.15732">
+      <path
+         d="m 300.84348,289.17685 h 15.7432 l 7.68305,16.73303 8.10727,-16.73303 h 13.52784 l -15.17757,29.08248 17.15725,35.25721 H 332.377 l -9.37992,-21.02235 -10.55831,21.02235 h -13.52783 l 17.67574,-32.99471 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path882"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="B"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f3456a;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text1101"
+       transform="translate(-637.48359,1.9376401)">
+      <path
+         d="m 405.51222,9.7902377 h 21.96505 q 7.73019,0 11.64242,1.2255183 3.95936,1.225518 6.59894,5.373424 2.68671,4.147907 2.68671,10.322632 0,10.793985 -9.19138,13.85778 10.93539,3.865095 10.93539,15.790327 0,6.268995 -2.96952,10.605443 -2.96953,4.289313 -7.35311,5.750507 -4.33645,1.41406 -12.34945,1.41406 h -21.96505 z m 13.57496,25.9715533 h 4.57213 q 6.83462,0 8.57862,-2.451036 1.79115,-2.451036 1.79115,-5.609102 0,-2.922388 -1.79115,-5.184883 -1.744,-2.30963 -7.54164,-2.30963 h -5.60911 z m 0,27.291341 h 6.92889 q 9.75701,0 9.75701,-8.390084 0,-4.666395 -2.45103,-6.551808 -2.4039,-1.932547 -7.30598,-1.932547 h -6.92889 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#f3456a;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path1115"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="Y"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f2fa8b;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text1105"
+       transform="translate(-637.48359,1.9376401)">
+      <path
+         d="m 410.39912,93.367462 h 15.55465 l 9.09711,23.473378 9.70987,-23.473378 h 13.81065 l -17.86428,37.142618 v 27.19707 h -14.14059 v -27.19707 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#f2fa8b;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path1118"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="A"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#69f572;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text1109"
+       transform="translate(-637.48359,1.9376401)">
+      <path
+         d="m 431.25809,190.64586 h 14.23486 l 18.38277,64.33969 h -14.47054 l -3.2052,-13.29216 h -18.09996 l -3.15806,13.29216 h -13.00935 z m 12.25518,40.01787 -6.45754,-26.25436 -6.269,26.25436 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#69f572;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path1121"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="X"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.53310394px;line-height:1.25;font-family:'Eras Medium ITC';-inkscape-font-specification:'Eras Medium ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#78a7ef;fill-opacity:0.99607843;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="text1113"
+       transform="translate(-637.48359,1.9376401)">
+      <path
+         d="m 415.65946,290.66449 h 15.7432 l 7.68305,16.73303 8.10727,-16.73303 h 13.52783 l -15.17756,29.08248 17.15725,35.25721 h -15.50752 l -9.37992,-21.02234 -10.55831,21.02234 h -13.52783 l 17.67574,-32.99471 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Franklin Gothic Demi Cond';-inkscape-font-specification:'Franklin Gothic Demi Cond';fill:#78a7ef;fill-opacity:0.99607843;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path1124"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:9.35055161;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 403.916,1650.8418 -61.57225,134.4596 h 19.07304 v 168.4974 h 6.16797 v 12.0127 h -6.16797 v 17.3487 h -18.5332 v 112.3479 H 465.4824 v -112.3479 h -18.53125 v -17.3487 h -6.01171 v -12.0127 h 6.01171 v -168.4974 h 18.53518 z"
+       transform="scale(0.26458333)"
+       id="rect881"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccc"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\hand.png"
+       inkscape:export-xdpi="52.861553"
+       inkscape:export-ydpi="52.861553" />
+    <path
+       id="path902"
+       d="m 118.25582,472.36099 -11.38638,-33.14777 v 0 l -11.244582,33.14777"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.17400002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\hand.png"
+       inkscape:export-xdpi="52.861553"
+       inkscape:export-ydpi="52.861553" />
+    <rect
+       y="470.17456"
+       x="105.4441"
+       height="52.310291"
+       width="2.6631777"
+       id="rect897"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.64600003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\hand.png"
+       inkscape:export-xdpi="52.861553"
+       inkscape:export-ydpi="52.861553"
+       ry="1.3315889" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.31544507;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path913"
+       sodipodi:type="arc"
+       sodipodi:cx="106.25421"
+       sodipodi:cy="540.87775"
+       sodipodi:rx="2.0959461"
+       sodipodi:ry="2.0959461"
+       sodipodi:start="0.017453293"
+       sodipodi:end="0.0080491967"
+       d="m 108.34984,540.91433 a 2.0959461,2.0959461 0 0 1 -2.12728,2.05912 2.0959461,2.0959461 0 0 1 -2.06412,-2.12243 2.0959461,2.0959461 0 0 1 2.11757,-2.06911 2.0959461,2.0959461 0 0 1 2.07408,2.11271"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\hand.png"
+       inkscape:export-xdpi="52.861553"
+       inkscape:export-ydpi="52.861553"
+       sodipodi:open="true" />
   </g>
 </svg>
