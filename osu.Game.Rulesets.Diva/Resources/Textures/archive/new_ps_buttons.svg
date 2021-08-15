@@ -147,6 +147,19 @@
          stdDeviation="3.1161149"
          id="feGaussianBlur969" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2124"
+       x="-0.13901526"
+       width="1.2780305"
+       y="-0.12565876"
+       height="1.2513175">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.2883173"
+         id="feGaussianBlur2126" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -155,9 +168,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.77054642"
-     inkscape:cx="186.3734"
-     inkscape:cy="-750.41272"
+     inkscape:zoom="0.24535735"
+     inkscape:cx="2826.1188"
+     inkscape:cy="-30.301873"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -167,7 +180,14 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     showguides="true" />
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="543.49298,10.514002"
+       orientation="1,0"
+       id="guide2097"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -189,8 +209,16 @@
        id="rect3100"
        width="787.13519"
        height="689.52905"
-       x="-942.81714"
-       y="229.53685" />
+       x="-1566.2345"
+       y="-59.030834" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter2124)"
+       d="m 787.97425,218.86806 v 30.06845 h -21.92012 l 37.01738,51.8356 37.01738,-51.8356 h -22.18986 v -30.06845 z"
+       id="path2114"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\CrossStat.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
     <g
        transform="translate(60.285207,-79.466869)"
        id="g893"
@@ -568,5 +596,120 @@
        inkscape:export-xdpi="52.861553"
        inkscape:export-ydpi="52.861553"
        sodipodi:open="true" />
+    <path
+       style="opacity:1;fill:#f3456a;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 543.49298,157.66953 h 30.06845 v 21.92012 l 51.8356,-37.01738 -51.8356,-37.01738 v 22.18986 h -30.06845 z"
+       id="rect2091"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\XB\CircleMove.png"
+       inkscape:export-xdpi="147.77589"
+       inkscape:export-ydpi="147.77589" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2100"
+       d="m 491.37834,221.47145 v 30.06845 h -21.92012 l 37.01738,51.8356 37.01738,-51.8356 h -22.18986 v -30.06845 z"
+       style="opacity:1;fill:#79a7ef;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\CrossMove.png"
+       inkscape:export-xdpi="147.77589"
+       inkscape:export-ydpi="147.77589" />
+    <path
+       style="opacity:1;fill:#61de93;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="M 521.57286,527.67405 V 497.6056 h 21.92012 L 506.4756,445.77 469.45822,497.6056 h 22.18986 v 30.06845 z"
+       id="path2102"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\TriangleMove.png"
+       inkscape:export-xdpi="147.77589"
+       inkscape:export-ydpi="147.77589" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2104"
+       d="M 547.42755,356.24042 H 517.3591 V 334.3203 l -51.8356,37.01738 51.8356,37.01738 V 386.1652 h 30.06845 z"
+       style="opacity:1;fill:#d07fc2;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\SquareMove.png"
+       inkscape:export-xdpi="147.77589"
+       inkscape:export-ydpi="147.77589" />
+    <path
+       style="opacity:1;fill:#69f572;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 636.2562,221.47145 v 30.06845 h -21.92012 l 37.01738,51.8356 37.01738,-51.8356 h -22.18986 v -30.06845 z"
+       id="path2106"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\XB\CrossMove.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2108"
+       d="M 666.45072,527.67405 V 497.6056 h 21.92012 L 651.35346,445.77 614.33608,497.6056 h 22.18986 v 30.06845 z"
+       style="opacity:1;fill:#f2fa8b;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\XB\TriangleMove.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
+    <path
+       style="opacity:1;fill:#709cdf;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="M 692.30541,356.24042 H 662.23696 V 334.3203 l -51.8356,37.01738 51.8356,37.01738 V 386.1652 h 30.06845 z"
+       id="path2110"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\XB\SquareMove.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2112"
+       d="m 787.97425,218.86806 v 30.06845 h -21.92012 l 37.01738,51.8356 37.01738,-51.8356 h -22.18986 v -30.06845 z"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\CrossStat.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
+    <path
+       inkscape:export-ydpi="134.326"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\SquareStat.png"
+       inkscape:connector-curvature="0"
+       id="path2130"
+       d="M 825.71682,348.27115 V 378.3396 H 803.7967 l 37.01738,51.8356 37.01738,-51.8356 H 855.6416 v -30.06845 z"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter2124)"
+       transform="rotate(90,830.03049,362.26419)" />
+    <path
+       inkscape:export-ydpi="134.326"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\SquareStat.png"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="M 844.02353,357.95052 H 813.95508 V 336.0304 l -51.8356,37.01738 51.8356,37.01738 V 387.8753 h 30.06845 z"
+       id="path2132"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="rotate(180,824.63869,436.67097)"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter2124)"
+       d="M 825.71682,348.27115 V 378.3396 H 803.7967 l 37.01738,51.8356 37.01738,-51.8356 H 855.6416 v -30.06845 z"
+       id="path2134"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\TriangleStat.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2136"
+       d="m 823.56057,525.07079 v -30.06845 h 21.92012 l -37.01738,-51.8356 -37.01738,51.8356 h 22.18986 v 30.06845 z"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\TriangleStat.png"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-ydpi="134.326" />
+    <path
+       inkscape:export-ydpi="134.326"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\CircleStat.png"
+       inkscape:connector-curvature="0"
+       id="path2138"
+       d="m 789.05261,97.013481 v 30.068449 h -21.92012 l 37.01738,51.8356 37.01738,-51.8356 H 818.97739 V 97.013481 Z"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;filter:url(#filter2124)"
+       transform="rotate(-90,804.14987,137.9655)" />
+    <path
+       inkscape:export-ydpi="134.326"
+       inkscape:export-xdpi="134.326"
+       inkscape:export-filename="Z:\Documents\programmin\osu-lazer-mode\osuDiva\osuDiva-main\osu-DIVA\osu.Game.Rulesets.Diva\Resources\Textures\Doubles\CircleStat.png"
+       style="opacity:1;fill:#373b59;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 763.19785,153.06276 h 30.06845 v 21.92012 l 51.8356,-37.01738 -51.8356,-37.01738 v 22.18986 h -30.06845 z"
+       id="path2140"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
