@@ -69,7 +69,7 @@ namespace osu.Game.Rulesets.Diva.UI
        
         private void onJudgementLoaded(DrawableDivaJudgement j)
         {
-            judgementAboveHitObjectLayer.Add(j.GetProxyAboveHitObjectsContent());
+            judgementAboveHitObjectLayer.Add(j.ProxiedAboveHitObjectsContent);
         }
 
         private void onNewResult(DrawableHitObject judgedObject, JudgementResult result)
