@@ -20,6 +20,7 @@ using osu.Game.Rulesets.Diva.Configuration;
 using osu.Framework.Bindables;
 using osu.Game.Rulesets.Diva.Judgements;
 using osu.Game.Rulesets.Judgements;
+using osu.Framework.Input.Events;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
@@ -196,21 +197,21 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                 this.approachPiece.UpdatePos(b);
         }
 
-        public virtual bool OnPressed(DivaAction action)
-        {
-            this.Samples.Play();
-            
-            if (Judged)
-                return false;
+		public virtual bool OnPressed(KeyBindingPressEvent<DivaAction> e)
+		{
+			this.Samples.Play();
 
-            validPress = action == validAction;
-            pressed = true;
+			if (Judged)
+				return false;
 
-            return true;
-        }
+			validPress = e.Action == validAction;
+			pressed = true;
 
-        public virtual void OnReleased(DivaAction action)
-        {
-        }
-    }
+			return true;
+		}
+
+		public virtual void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
+		{
+		}
+	}
 }

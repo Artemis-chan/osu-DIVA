@@ -13,20 +13,9 @@ namespace osu.Game.Rulesets.Diva.Tests
     public class TestSceneOsuGame : OsuTestScene
     {
         [BackgroundDependencyLoader]
-        private void load(GameHost host, OsuGameBase gameBase)
+        private void load()
         {
-            OsuGame game = new OsuGame();
-            game.SetHost(host);
-
-            Children = new Drawable[]
-            {
-                new Box
-                {
-                    RelativeSizeAxes = Axes.Both,
-                    Colour = Color4.Black,
-                },
-                game
-            };
-        }
+			AddGame(new OsuGame());
+		}
     }
 }

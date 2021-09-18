@@ -20,6 +20,7 @@ using osu.Game.Rulesets.Diva.Configuration;
 using osu.Framework.Bindables;
 using osu.Game.Rulesets.Diva.Judgements;
 using osu.Game.Rulesets.Judgements;
+using osu.Framework.Input.Events;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
@@ -38,7 +39,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
 		protected override string GetTextureLocation() => "Doubles/" + base.GetTextureLocation();
 
-		public override bool OnPressed(DivaAction action)
+		public override bool OnPressed(KeyBindingPressEvent<DivaAction> e)
         {
             this.Samples.Play();
 
@@ -46,7 +47,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                 return false;
 
 
-			if(action == validAction || action == doubleAction)
+			if(e.Action == validAction || e.Action == doubleAction)
 				inputCount++;
 
 			if(inputCount == 2)
@@ -67,11 +68,11 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 			return true;
         }
 
-        public override void OnReleased(DivaAction action)
-        {
-            // inputs.Remove(action);
-			// inputCount--;
-		}
+        // public override void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
+        // {
+        //     // inputs.Remove(action);
+		// 	// inputCount--;
+		// }
 
 	}
 	

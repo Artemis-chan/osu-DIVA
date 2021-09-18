@@ -18,6 +18,7 @@ using osu.Game.Rulesets.Objects.Drawables;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Diva.Scoring;
 using osu.Game.Rulesets.Diva.Objects.Drawables;
+using osu.Framework.Input.Events;
 
 namespace osu.Game.Rulesets.Diva.UI
 {
@@ -56,17 +57,17 @@ namespace osu.Game.Rulesets.Diva.UI
 
             NewResult += onNewResult;
         }
+        
+		public bool OnPressed(KeyBindingPressEvent<DivaAction> e)
+		{
+			this.hitSample.Play();
+			return true;
+		}
 
-        public bool OnPressed(DivaAction action)
-        {
-            this.hitSample.Play();
-            return true;
-        }
+		public void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
+		{
+		}
 
-        public void OnReleased(DivaAction action)
-        {
-        }
-       
         private void onJudgementLoaded(DrawableDivaJudgement j)
         {
             judgementAboveHitObjectLayer.Add(j.ProxiedAboveHitObjectsContent);
@@ -81,7 +82,7 @@ namespace osu.Game.Rulesets.Diva.UI
             judgementLayer.Add(explosion);
         }
 
-        private class DrawableJudgementPool : DrawablePool<DrawableDivaJudgement>
+		private class DrawableJudgementPool : DrawablePool<DrawableDivaJudgement>
         {
             private readonly HitResult result;
             private readonly Action<DrawableDivaJudgement> onLoaded;
