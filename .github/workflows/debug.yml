@@ -26,7 +26,7 @@ jobs:
           - name: Build the debug DLL
             id: build
             run: dotnet build
-            continue-on-error: true
+            # continue-on-error: true
           - name: Open an issue if bump fails
             id: issue
             if: steps.build.outcome == 'failure' && github.actor == 'dependabot'
