@@ -36,9 +36,9 @@ namespace osu.Game.Rulesets.Diva.Replays
                 {
                     Frames.Add(new DivaReplayFrame(Lerp(prevTime, hitTime, 0.1)));
                 }
-                
-                if(hitObject is DoublePressButton dButt)
-				    Frames.Add(new DivaReplayFrame(hitTime, hitObject.ValidAction, dButt.DoubleAction));
+
+                if (hitObject is DoublePressButton dButt)
+                    Frames.Add(new DivaReplayFrame(hitTime, hitObject.ValidAction, dButt.DoubleAction));
                 else
                     Frames.Add(new DivaReplayFrame(hitTime, hitObject.ValidAction));
 
@@ -48,7 +48,7 @@ namespace osu.Game.Rulesets.Diva.Replays
             return Replay;
         }
 
-		double Lerp(double a, double b, double t)
-			=> a + (b - a) * t;
-	}
+        double Lerp(double a, double b, double t)
+            => a + (b - a) * t;
+    }
 }

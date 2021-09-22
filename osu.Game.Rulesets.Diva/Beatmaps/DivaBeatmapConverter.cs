@@ -32,23 +32,13 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         public DivaBeatmapConverter(IBeatmap beatmap, Ruleset ruleset)
             : base(beatmap, ruleset)
         {
-            double od = (double)beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty;
-            if (od > 6.0d)
+            this.TargetButtons = beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty switch
             {
-                this.TargetButtons = 4;
-                return;
-            }
-            if (od > 4.5d)
-            {
-                this.TargetButtons = 3;
-                return;
-            }
-            if (od > 2d)
-            {
-                this.TargetButtons = 2;
-                return;
-            }
-            this.TargetButtons = 1;
+                >= 6.0f => 4,
+                >= 4.5f => 3,
+                >= 2f => 2,
+                _ => 1,
+            };
 
             //Console.WriteLine(this.TargetButtons);
         }
@@ -60,41 +50,41 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             //not sure if handling the cancellation is needed, as offical modes doesnt handle *scratches my head* or even its possible
             var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
 
-			//currently press presses are placed in place of sliders as placeholder, but arcade slider are better suited for these
-			//another option would be long sliders: arcade sliders, short sliders: doubles
-			if(AllowDoubles && original is IHasPathWithRepeats)
+            //currently press presses are placed in place of sliders as placeholder, but arcade slider are better suited for these
+            //another option would be long sliders: arcade sliders, short sliders: doubles
+            if (AllowDoubles && original is IHasPathWithRepeats)
             {
-				yield return new DoublePressButton
-				{
-					Samples = original.Samples,
-					StartTime = original.StartTime,
-					Position = pos,
-					ValidAction = ValidAction(),
+                yield return new DoublePressButton
+                {
+                    Samples = original.Samples,
+                    StartTime = original.StartTime,
+                    Position = pos,
+                    ValidAction = ValidAction(),
                     DoubleAction = DoubleAction(prevAction),
-					ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
-				};
-			}
+                    ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
+                };
+            }
             else
             {
-				yield return new DivaHitObject
-				{
-					Samples = original.Samples,
-					StartTime = original.StartTime,
-					Position = pos,
-					ValidAction = ValidAction(),
-					ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
-				};
+                yield return new DivaHitObject
+                {
+                    Samples = original.Samples,
+                    StartTime = original.StartTime,
+                    Position = pos,
+                    ValidAction = ValidAction(),
+                    ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
+                };
             }
 
         }
 
-		private static DivaAction DoubleAction(DivaAction ac) => ac switch
-		{
-			DivaAction.Circle => DivaAction.Right,
-			DivaAction.Cross => DivaAction.Down,
-			DivaAction.Square => DivaAction.Left,
-			_ => DivaAction.Up
-		};
+        private static DivaAction DoubleAction(DivaAction ac) => ac switch
+        {
+            DivaAction.Circle => DivaAction.Right,
+            DivaAction.Cross => DivaAction.Down,
+            DivaAction.Square => DivaAction.Left,
+            _ => DivaAction.Up
+        };
 
         //placeholder
         private DivaAction ValidAction()
@@ -104,7 +94,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             switch (prevAction)
             {
                 case DivaAction.Circle:
-                    if(this.TargetButtons < 2) break;
+                    if (this.TargetButtons < 2) break;
                     ac = DivaAction.Cross;
                     break;
 
@@ -128,11 +118,10 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             var dir = (prevObjectPos - currentObjectPos);
             prevObjectPos = currentObjectPos;
 
-            if(dir == Vector2.Zero)
+            if (dir == Vector2.Zero)
                 return new Vector2(approach_piece_distance);
 
-            return dir.Normalized() * approach_piece_distance;            
-        }        
-
+            return dir.Normalized() * approach_piece_distance;
+        }
     }
 }
