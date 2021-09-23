@@ -35,14 +35,14 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         protected readonly Sprite approachHand;
         protected readonly ApproachPiece approachPiece;
 
-		protected readonly DivaAction validAction;
+        protected readonly DivaAction validAction;
 
         protected bool validPress = false;
-		protected bool pressed = false;
+        protected bool pressed = false;
 
         protected BindableBool useXB = new BindableBool(false);
         protected BindableBool enableVisualBursts = new BindableBool(true);
-        
+
         protected override JudgementResult CreateResult(Judgement judgement) => new DivaJudgementResult(HitObject, judgement);
 
         public DrawableDivaHitObject(DivaHitObject hitObject)
@@ -99,9 +99,9 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         }
 
-		protected virtual string GetTextureLocation() => (useXB.Value) ? "XB/" : "";
+        protected virtual string GetTextureLocation() => (useXB.Value) ? "XB/" : "";
 
-		public override double LifetimeStart
+        public override double LifetimeStart
         {
             get => base.LifetimeStart;
             set
@@ -137,7 +137,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
                 pressed = false;
                 return;
             }
-            
+
             if (!HitObject.HitWindows.CanBeHit(timeOffset) && base.Time.Current > HitObject.StartTime)
             {
                 ApplyResult(r => r.Type = HitResult.Miss);
@@ -150,7 +150,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
             if (pressed && timeOffset > (-time_action))
             {
-                if(validPress)
+                if (validPress)
                     ApplyResult(r => r.Type = result);
                 else
                     ApplyResult(r => r.Type = HitResult.Miss);
@@ -174,9 +174,9 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             switch (state)
             {
                 case ArmedState.Hit:
-                    
 
-                    if(enableVisualBursts.Value)
+
+                    if (enableVisualBursts.Value)
                         this.ScaleTo(1.5f, 1500, Easing.OutQuint).FadeOut(1500, Easing.OutQuint).Expire();
                     break;
 
@@ -193,25 +193,25 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         protected override void Update()
         {
             var b = (float)((Time.Current - LifetimeStart) / time_preempt);
-            if(b < 1f)
+            if (b < 1f)
                 this.approachPiece.UpdatePos(b);
         }
 
-		public virtual bool OnPressed(KeyBindingPressEvent<DivaAction> e)
-		{
-			this.Samples.Play();
+        public virtual bool OnPressed(KeyBindingPressEvent<DivaAction> e)
+        {
+            this.Samples.Play();
 
-			if (Judged)
-				return false;
+            if (Judged)
+                return false;
 
-			validPress = e.Action == validAction;
-			pressed = true;
+            validPress = e.Action == validAction;
+            pressed = true;
 
-			return true;
-		}
+            return true;
+        }
 
-		public virtual void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
-		{
-		}
-	}
+        public virtual void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
+        {
+        }
+    }
 }

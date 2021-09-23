@@ -27,18 +27,18 @@ namespace osu.Game.Rulesets.Diva
         Cross,
 
         [Description("Circle")]
-		Circle,
+        Circle,
 
-		[Description("Left")]
-		Left,
+        [Description("Left")]
+        Left,
 
-		[Description("Up")]
-		Up,
+        [Description("Up")]
+        Up,
 
-		[Description("Down")]
-		Down,
+        [Description("Down")]
+        Down,
 
-		[Description("Right")]
-		Right
+        [Description("Right")]
+        Right
     }
 }

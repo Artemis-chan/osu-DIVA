@@ -40,7 +40,7 @@ namespace osu.Game.Rulesets.Diva.UI
                 hitSample = new SkinnableSound(new SampleInfo("normal-hitnormal")),
             });
         }
-        
+
         public DivaPlayfield()
         {
             InternalChildren = new Drawable[]
@@ -57,16 +57,16 @@ namespace osu.Game.Rulesets.Diva.UI
 
             NewResult += onNewResult;
         }
-        
-		public bool OnPressed(KeyBindingPressEvent<DivaAction> e)
-		{
-			this.hitSample.Play();
-			return true;
-		}
 
-		public void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
-		{
-		}
+        public bool OnPressed(KeyBindingPressEvent<DivaAction> e)
+        {
+            this.hitSample.Play();
+            return true;
+        }
+
+        public void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
+        {
+        }
 
         private void onJudgementLoaded(DrawableDivaJudgement j)
         {
@@ -82,7 +82,7 @@ namespace osu.Game.Rulesets.Diva.UI
             judgementLayer.Add(explosion);
         }
 
-		private class DrawableJudgementPool : DrawablePool<DrawableDivaJudgement>
+        private class DrawableJudgementPool : DrawablePool<DrawableDivaJudgement>
         {
             private readonly HitResult result;
             private readonly Action<DrawableDivaJudgement> onLoaded;
