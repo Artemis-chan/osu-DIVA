@@ -16,7 +16,5 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables.Pieces
         {
             Position = Extensions.CubicInterpolate(StartPos, Vector2.Zero, blend, slerp_distance);
         }
-        
-
     }
 }

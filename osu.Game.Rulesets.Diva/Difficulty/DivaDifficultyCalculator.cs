@@ -18,27 +18,24 @@ namespace osu.Game.Rulesets.Diva
         {
         }
 
-        protected override DifficultyAttributes CreateDifficultyAttributes(IBeatmap beatmap, Mod[] mods, Skill[] skills, double clockRate) {
+        protected override DifficultyAttributes CreateDifficultyAttributes(IBeatmap beatmap, Mod[] mods, Skill[] skills, double clockRate)
+        {
             double od = beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty;
 
-            double difficulty = 1;
             //TODO: This will need to be rewritten once we start work on #9
-            if (od > 6.0d)
+            double difficulty = beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty switch
             {
-                difficulty = 4;
-            } else if (od > 4.5d)
-            {
-                difficulty = 3;
-            } else if (od > 2d)
-            {
-                difficulty = 2;
-            }
-            
+                >= 6.0f => 4,
+                >= 4.5f => 3,
+                >= 2f => 2,
+                _ => 1,
+            };
+
             return new DifficultyAttributes(mods, skills, difficulty);
         }
 
         protected override IEnumerable<DifficultyHitObject> CreateDifficultyHitObjects(IBeatmap beatmap, double clockRate) => Enumerable.Empty<DifficultyHitObject>();
 
         protected override Skill[] CreateSkills(IBeatmap beatmap, Mod[] mods, double clockRate) => new Skill[0];
-	}
+    }
 }

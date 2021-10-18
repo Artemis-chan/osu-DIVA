@@ -25,55 +25,54 @@ using osu.Framework.Input.Events;
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
     public class DrawableDivaDoubleHitObject : DrawableDivaHitObject
-	{
-		private const int MAX_COUNT = 2;
-		private List<DivaAction> inputs = new List<DivaAction>();
-		private readonly DivaAction doubleAction;
-		private int inputCount = 0;
+    {
+        private const int MAX_COUNT = 2;
+        private List<DivaAction> inputs = new List<DivaAction>();
+        private readonly DivaAction doubleAction;
+        private int inputCount = 0;
 
-		public DrawableDivaDoubleHitObject(DivaHitObject hitObject)
-			: base(hitObject)
-		{
-			doubleAction = (hitObject as DoublePressButton).DoubleAction;
-		}
+        public DrawableDivaDoubleHitObject(DivaHitObject hitObject)
+            : base(hitObject)
+        {
+            doubleAction = (hitObject as DoublePressButton).DoubleAction;
+        }
 
-		protected override string GetTextureLocation() => "Doubles/" + base.GetTextureLocation();
+        protected override string GetTextureLocation() => "Doubles/" + base.GetTextureLocation();
 
-		public override bool OnPressed(KeyBindingPressEvent<DivaAction> e)
+        public override bool OnPressed(KeyBindingPressEvent<DivaAction> e)
         {
             this.Samples.Play();
 
-			if (Judged || inputCount > 2)
+            if (Judged || inputCount > 2)
                 return false;
 
 
-			if(e.Action == validAction || e.Action == doubleAction)
-				inputCount++;
+            if (e.Action == validAction || e.Action == doubleAction)
+                inputCount++;
 
-			if(inputCount == 2)
-			{
-				pressed = true;
-				validPress = true;
-			}
+            if (inputCount == 2)
+            {
+                pressed = true;
+                validPress = true;
+            }
 
-			// inputs.Add(action);
-			// inputCount++;
+            // inputs.Add(action);
+            // inputCount++;
 
-			// if(inputCount == 2)
-			// {
-			// 	pressed = true;
-			// 	validPress = inputs.Contains(validAction) && inputs.Contains(doubleAction);
-			// }
+            // if(inputCount == 2)
+            // {
+            // 	pressed = true;
+            // 	validPress = inputs.Contains(validAction) && inputs.Contains(doubleAction);
+            // }
 
-			return true;
+            return true;
         }
 
         // public override void OnReleased(KeyBindingReleaseEvent<DivaAction> e)
         // {
         //     // inputs.Remove(action);
-		// 	// inputCount--;
-		// }
+        // 	// inputCount--;
+        // }
+    }
 
-	}
-	
 }

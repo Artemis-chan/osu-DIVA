@@ -38,7 +38,7 @@ namespace osu.Game.Rulesets.Diva
         public override RulesetSettingsSubsection CreateSettings() =>
             new DivaSettingsSubsection(this);
 
-        public override IRulesetConfigManager CreateConfig(SettingsStore settings) => 
+        public override IRulesetConfigManager CreateConfig(SettingsStore settings) =>
             new DivaRulesetConfigManager(settings, RulesetInfo);
 
         public override IEnumerable<Mod> ConvertFromLegacyMods(LegacyMods mods)
@@ -139,7 +139,7 @@ namespace osu.Game.Rulesets.Diva
             new KeyBinding(InputKey.W, DivaAction.Triangle),
             new KeyBinding(InputKey.S, DivaAction.Cross),
             new KeyBinding(InputKey.D, DivaAction.Circle),
-            
+
             new KeyBinding(InputKey.Left, DivaAction.Left),
             new KeyBinding(InputKey.Up, DivaAction.Up),
             new KeyBinding(InputKey.Right, DivaAction.Right),
