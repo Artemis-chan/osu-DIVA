@@ -8,6 +8,7 @@ using osu.Game.Rulesets.Diva.Objects;
 using osu.Game.Rulesets.Diva.Replays;
 using osu.Game.Scoring;
 using osu.Game.Users;
+using osu.Game.Online.API.Requests.Responses;
 
 namespace osu.Game.Rulesets.Diva.Mods
 {
@@ -17,7 +18,7 @@ namespace osu.Game.Rulesets.Diva.Mods
         {
             ScoreInfo = new ScoreInfo
             {
-                User = new User { Username = "Autoplay" },
+                User = new APIUser { Username = "Autoplay" },
             },
             Replay = new DivaAutoGenerator(beatmap).Generate(),
         };

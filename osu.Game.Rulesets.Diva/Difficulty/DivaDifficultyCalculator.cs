@@ -13,7 +13,7 @@ namespace osu.Game.Rulesets.Diva
 {
     public class DivaDifficultyCalculator : DifficultyCalculator
     {
-        public DivaDifficultyCalculator(Ruleset ruleset, WorkingBeatmap beatmap)
+        public DivaDifficultyCalculator(IRulesetInfo ruleset, IWorkingBeatmap beatmap)
             : base(ruleset, beatmap)
         {
         }
@@ -31,7 +31,7 @@ namespace osu.Game.Rulesets.Diva
                 _ => 1,
             };
 
-            return new DifficultyAttributes(mods, skills, difficulty);
+            return new DifficultyAttributes(mods, difficulty);
         }
 
         protected override IEnumerable<DifficultyHitObject> CreateDifficultyHitObjects(IBeatmap beatmap, double clockRate) => Enumerable.Empty<DifficultyHitObject>();
