@@ -20,7 +20,7 @@ namespace osu.Game.Rulesets.Diva.Replays
 
         protected override bool IsImportant(DivaReplayFrame frame) => frame.Actions.Count > 0;
 
-        public override void CollectPendingInputs(List<IInput> inputs)
+        protected override void CollectReplayInputs(List<IInput> inputs)
         {
             inputs.Add(new ReplayState<DivaAction>()
             {
