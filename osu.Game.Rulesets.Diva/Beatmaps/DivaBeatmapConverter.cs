@@ -32,7 +32,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         public DivaBeatmapConverter(IBeatmap beatmap, Ruleset ruleset)
             : base(beatmap, ruleset)
         {
-            this.TargetButtons = beatmap.BeatmapInfo.BaseDifficulty.OverallDifficulty switch
+            this.TargetButtons = beatmap.BeatmapInfo.Difficulty.OverallDifficulty switch
             {
                 >= 6.0f => 4,
                 >= 4.5f => 3,
