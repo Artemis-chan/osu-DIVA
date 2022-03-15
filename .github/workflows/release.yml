@@ -26,7 +26,7 @@ jobs:
           - name: Upload as asset
             uses: softprops/action-gh-release@v1
             with:
-                files: osu.Game.Rulesets.Diva/bin/Release/net5.0/osu.Game.Rulesets.Diva.dll
+                files: osu.Game.Rulesets.Diva/bin/Release/*/osu.Game.Rulesets.Diva.dll
             env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
