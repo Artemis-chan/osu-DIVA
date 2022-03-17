@@ -32,7 +32,7 @@ jobs:
           branch: osu-bump-${{ steps.update-csproj.outputs.version }}
           commit-message: 'chore: update osu packages to ${{ steps.update-csproj.outputs.version }}'
           title: 'Update to osu! ${{ steps.update-csproj.outputs.version }}'
-          base: main
+          base: master
           body: |
             #skip-changelog
 
