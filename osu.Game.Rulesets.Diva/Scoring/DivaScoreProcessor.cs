@@ -11,6 +11,10 @@ namespace osu.Game.Rulesets.Diva.Scoring
 {
     public class DivaScoreProcessor : ScoreProcessor
     {
+		public DivaScoreProcessor(Ruleset ruleset) : base(ruleset)
+		{
+		}
+        
         protected override JudgementResult CreateResult(HitObject hitObject, Judgement judgement) =>
             new DivaJudgementResult((DivaHitObject)hitObject, judgement);
     }
