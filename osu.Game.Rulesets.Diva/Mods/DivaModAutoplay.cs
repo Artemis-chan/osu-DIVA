@@ -14,13 +14,10 @@ namespace osu.Game.Rulesets.Diva.Mods
 {
     public class DivaModAutoplay : ModAutoplay
     {
-        public override Score CreateReplayScore(IBeatmap beatmap, IReadOnlyList<Mod> mods) => new Score
-        {
-            ScoreInfo = new ScoreInfo
-            {
-                User = new APIUser { Username = "Autoplay" },
-            },
-            Replay = new DivaAutoGenerator(beatmap).Generate(),
-        };
+        public override ModReplayData CreateReplayData(IBeatmap beatmap, IReadOnlyList<Mod> mods) => new ModReplayData
+        (            
+            new DivaAutoGenerator(beatmap).Generate(),
+            new ModCreatedUser() { Username = "Autoplay" }
+        );
     }
 }
