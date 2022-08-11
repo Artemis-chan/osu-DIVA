@@ -20,6 +20,9 @@ using osu.Game.Rulesets.Diva.UI;
 using osu.Game.Rulesets.Diva.Configuration;
 using osu.Game.Overlays.Settings;
 using osu.Game.Beatmaps.Legacy;
+using osu.Framework.IO.Stores;
+using osu.Framework.Allocation;
+using osu.Framework.Graphics.Rendering;
 
 namespace osu.Game.Rulesets.Diva
 {
@@ -147,9 +150,22 @@ namespace osu.Game.Rulesets.Diva
             new KeyBinding(InputKey.Down, DivaAction.Down)
         };
 
-        public override Drawable CreateIcon() => new Sprite
-        {
-            Texture = new TextureStore(new TextureLoaderStore(CreateResourceStore()), false).Get("Textures/diva"),
-        };
+        public override Drawable CreateIcon() => new DivaRulesetIcon(this);
+
+		public class DivaRulesetIcon : Sprite
+		{
+			private readonly Ruleset ruleset;
+
+			public DivaRulesetIcon(Ruleset ruleset)
+			{
+				this.ruleset = ruleset;
+			}
+
+			[BackgroundDependencyLoader]
+			private void load(IRenderer renderer)
+			{
+				Texture = new TextureStore(renderer, new TextureLoaderStore(ruleset.CreateResourceStore()), false).Get("Textures/diva");
+			}
+		}
     }
 }
