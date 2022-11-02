@@ -90,7 +90,7 @@ namespace osu.Game.Rulesets.Diva
                 yield return new OsuModSpunOut();
 
             if (mods.HasFlag(LegacyMods.Target))
-                yield return new OsuModTarget();
+                yield return new OsuModTargetPractice();
 
             if (mods.HasFlag(LegacyMods.TouchDevice))
                 yield return new OsuModTouchDevice();
