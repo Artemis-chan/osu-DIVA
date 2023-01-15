@@ -9,7 +9,7 @@ using osu.Game.Rulesets.Diva.Configuration;
 
 namespace osu.Game.Rulesets.Diva.UI
 {
-    public class DivaSettingsSubsection : RulesetSettingsSubsection
+	public partial class DivaSettingsSubsection : RulesetSettingsSubsection
     {
         protected override LocalisableString Header => new("osu!DIVA");
 

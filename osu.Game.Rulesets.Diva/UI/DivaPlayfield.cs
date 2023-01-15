@@ -23,7 +23,7 @@ using osu.Framework.Input.Events;
 namespace osu.Game.Rulesets.Diva.UI
 {
     [Cached]
-    public class DivaPlayfield : Playfield, IKeyBindingHandler<DivaAction>
+	public partial class DivaPlayfield : Playfield, IKeyBindingHandler<DivaAction>
     {
         SkinnableSound hitSample;
         private readonly JudgementContainer<DrawableDivaJudgement> judgementLayer;
@@ -82,7 +82,7 @@ namespace osu.Game.Rulesets.Diva.UI
             judgementLayer.Add(explosion);
         }
 
-        private class DrawableJudgementPool : DrawablePool<DrawableDivaJudgement>
+		private partial class DrawableJudgementPool : DrawablePool<DrawableDivaJudgement>
         {
             private readonly HitResult result;
             private readonly Action<DrawableDivaJudgement> onLoaded;

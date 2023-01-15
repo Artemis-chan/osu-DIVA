@@ -12,7 +12,7 @@ jobs:
       run:
         shell: pwsh
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Bump nuget package version
         id: update-csproj

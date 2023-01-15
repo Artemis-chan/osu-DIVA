@@ -9,7 +9,7 @@ using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Diva.Scoring
 {
-    public class DivaScoreProcessor : ScoreProcessor
+    public partial class DivaScoreProcessor : ScoreProcessor
     {
 		public DivaScoreProcessor(Ruleset ruleset) : base(ruleset)
 		{

@@ -8,7 +8,7 @@ using osu.Game.Rulesets.Diva;
 using osuTK;
 namespace osu.Game.Rulesets.Diva.Objects.Drawables.Pieces
 {
-    public class ApproachPiece : Sprite
+	public partial class ApproachPiece : Sprite
     {
         private const float slerp_distance = 150;
         public Vector2 StartPos;

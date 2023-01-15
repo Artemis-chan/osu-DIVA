@@ -7,7 +7,7 @@ using osuTK;
 
 namespace osu.Game.Rulesets.Diva.UI
 {
-    public class DivaPlayfieldAdjustmentContainer : PlayfieldAdjustmentContainer
+	public partial class DivaPlayfieldAdjustmentContainer : PlayfieldAdjustmentContainer
     {
         public DivaPlayfieldAdjustmentContainer()
         {

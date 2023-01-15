@@ -17,7 +17,7 @@ using osu.Game.Rulesets.UI;
 namespace osu.Game.Rulesets.Diva.UI
 {
     [Cached]
-    public class DrawableDivaRuleset : DrawableRuleset<DivaHitObject>
+	public partial class DrawableDivaRuleset : DrawableRuleset<DivaHitObject>
     {
         public DrawableDivaRuleset(DivaRuleset ruleset, IBeatmap beatmap, IReadOnlyList<Mod> mods = null)
             : base(ruleset, beatmap, mods)

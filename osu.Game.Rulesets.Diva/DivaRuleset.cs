@@ -152,7 +152,7 @@ namespace osu.Game.Rulesets.Diva
 
         public override Drawable CreateIcon() => new DivaRulesetIcon(this);
 
-		public class DivaRulesetIcon : Sprite
+		public partial class DivaRulesetIcon : Sprite
 		{
 			private readonly Ruleset ruleset;
 

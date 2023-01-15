@@ -7,7 +7,7 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Diva
 {
-    public class DivaInputManager : RulesetInputManager<DivaAction>
+    public partial class DivaInputManager : RulesetInputManager<DivaAction>
     {
         public DivaInputManager(RulesetInfo ruleset)
             : base(ruleset, 0, SimultaneousBindingMode.All)

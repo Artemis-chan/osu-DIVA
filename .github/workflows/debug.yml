@@ -17,10 +17,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Checkout code
-            uses: actions/checkout@v2
+            uses: actions/checkout@v3
 
           - name: Install .NET Core
-            uses: actions/setup-dotnet@v1
+            uses: actions/setup-dotnet@v3
             with:
                 dotnet-version: '6.0.x'
           - name: Build the debug DLL
@@ -45,7 +45,7 @@ jobs:
           - name: Give unit tests a spin
             run: dotnet test --no-build
           - name: Upload artifact for further testing
-            uses: actions/upload-artifact@v2
+            uses: actions/upload-artifact@v3
             with:
                 name: release
                 path: osu.Game.Rulesets.Diva/bin

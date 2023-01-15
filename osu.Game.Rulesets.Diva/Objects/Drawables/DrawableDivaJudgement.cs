@@ -12,7 +12,7 @@ using osu.Game.Rulesets.Diva.UI;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
-    public class DrawableDivaJudgement : DrawableJudgement
+	public partial class DrawableDivaJudgement : DrawableJudgement
     {
         protected SkinnableLighting Lighting { get; private set; }
 
@@ -67,7 +67,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         protected override Drawable CreateDefaultJudgement(HitResult result) => new DivaJudgementPiece(result);
 
-        private class DivaJudgementPiece : DefaultJudgementPiece
+		private partial class DivaJudgementPiece : DefaultJudgementPiece
         {
             public DivaJudgementPiece(HitResult result)
                 : base(result)

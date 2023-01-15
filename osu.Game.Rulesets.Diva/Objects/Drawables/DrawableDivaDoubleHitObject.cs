@@ -24,7 +24,7 @@ using osu.Framework.Input.Events;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
-    public class DrawableDivaDoubleHitObject : DrawableDivaHitObject
+	public partial class DrawableDivaDoubleHitObject : DrawableDivaHitObject
     {
         private const int MAX_COUNT = 2;
         private List<DivaAction> inputs = new List<DivaAction>();

@@ -7,7 +7,7 @@ using osu.Game.Tests.Visual;
 namespace osu.Game.Rulesets.Diva.Tests
 {
     [TestFixture]
-    public class TestSceneOsuPlayer : PlayerTestScene
+    public partial class TestSceneOsuPlayer : PlayerTestScene
     {
         protected override Ruleset CreatePlayerRuleset()
             => new DivaRuleset();

@@ -24,7 +24,7 @@ using osu.Framework.Input.Events;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
-    public class DrawableDivaHitObject : DrawableHitObject<DivaHitObject>, IKeyBindingHandler<DivaAction>
+	public partial class DrawableDivaHitObject : DrawableHitObject<DivaHitObject>, IKeyBindingHandler<DivaAction>
     {
         private const double time_preempt = 850;
         private const double time_fadein = 300;

@@ -10,7 +10,7 @@ using osuTK.Graphics;
 
 namespace osu.Game.Rulesets.Diva.Tests
 {
-    public class TestSceneOsuGame : OsuTestScene
+	public partial class TestSceneOsuGame : OsuTestScene
     {
         [BackgroundDependencyLoader]
         private void load()
