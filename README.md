@@ -5,7 +5,7 @@ A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!
 1. Get the dll from:
     - [Releases](https://github.com/Artemis-chan/osu-DIVA/releases)
     - If that does not work,
-        1. Go to [Actions tab](https://github.com/Artemis-chan/osu-DIVA/actions?query=workflow%3Adotnet-debug+is%3Asuccess+workflow%3Adotnet-release)
+        1. Go to [Actions tab](https://github.com/Artemis-chan/osu-DIVA/actions?query=workflow%3Adotnet-debug+is%3Asuccess)
         2. Click on the latest lastest(top) workflow run
         3. Scroll down and download the release file from actifacts section
     - or [compile it yourself](#build)
