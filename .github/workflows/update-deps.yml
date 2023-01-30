@@ -28,12 +28,10 @@ jobs:
               (Get-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj) -replace $regex, $latestVer | Set-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj
               echo "osuVersion=$latestVer" >> $GITHUB_ENV
           }
-          echo "versionValid=$valid" >> $GITHUB_ENV
 
       - run: git --no-pager diff
 
       - name: Create PR
-        if: ${{ env.versionValid }}
         uses: peter-evans/create-pull-request@v4.2.3
         with:
           token: ${{ secrets.PAT }}
