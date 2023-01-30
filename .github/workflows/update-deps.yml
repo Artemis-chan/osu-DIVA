@@ -26,9 +26,9 @@ jobs:
               echo $latestVer
               $regex = '(?<=\"ppy\.osu\.Game.*\"\s*Version\s*=\s*\")(.*)(?=\")'
               (Get-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj) -replace $regex, $latestVer | Set-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj
-              echo "osuVersion=$latestVer >> $GITHUB_ENV"
+              echo "osuVersion=$latestVer" >> $GITHUB_ENV
           }
-          echo "versionValid=$valid >> $GITHUB_ENV"
+          echo "versionValid=$valid" >> $GITHUB_ENV
 
       - run: git --no-pager diff
 
