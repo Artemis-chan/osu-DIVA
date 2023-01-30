@@ -19,19 +19,26 @@ jobs:
         run: |
           $jdata = curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | ConvertFrom-Json
           $latestVer = $jdata.tag_name
-          $regex = '(?<=\"ppy\.osu\.Game.*\"\s*Version\s*=\s*\")(.*)(?=\")'
-          (Get-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj) -replace $regex, $latestVer | Set-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj
-          echo "::set-output name=version::$latestVer"
+          $valid = ![string]::IsNullOrWhiteSpace($latestVer)
+          if($valid) 
+          {
+              echo $latestVer
+              $regex = '(?<=\"ppy\.osu\.Game.*\"\s*Version\s*=\s*\")(.*)(?=\")'
+              (Get-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj) -replace $regex, $latestVer | Set-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj
+              echo "osuVersion=$latestVer >> $GITHUB_ENV"
+          }
+          echo "versionValid=$valid >> $GITHUB_ENV"
 
       - run: git --no-pager diff
 
       - name: Create PR
-        uses: peter-evans/create-pull-request@v3.14.0
+        if: ${{ env.versionValid }}
+        uses: peter-evans/create-pull-request@v4.2.3
         with:
           token: ${{ secrets.PAT }}
           branch: osu-bump-${{ steps.update-csproj.outputs.version }}
           commit-message: 'chore: update osu packages to ${{ steps.update-csproj.outputs.version }}'
-          title: 'Update to osu! ${{ steps.update-csproj.outputs.version }}'
+          title: 'Update to osu! ${{ env.osuVersion }}'
           base: master
           body: |
             #skip-changelog
