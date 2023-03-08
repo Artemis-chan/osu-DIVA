@@ -1,25 +1,7 @@
 // Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
-using System;
 using System.Collections.Generic;
-using osu.Framework.Allocation;
-using osu.Framework.Extensions.Color4Extensions;
-using osu.Framework.Graphics;
-using osu.Framework.Graphics.Sprites;
-using osu.Framework.Graphics.Textures;
-using osu.Framework.Input.Bindings;
-using osu.Game.Audio;
-using osu.Game.Beatmaps.ControlPoints;
-using osu.Game.Rulesets.Objects.Drawables;
-using osu.Game.Rulesets.Scoring;
-using osu.Game.Rulesets.Diva.Objects.Drawables.Pieces;
-using osuTK;
-using osuTK.Graphics;
-using osu.Game.Rulesets.Diva.Configuration;
-using osu.Framework.Bindables;
-using osu.Game.Rulesets.Diva.Judgements;
-using osu.Game.Rulesets.Judgements;
 using osu.Framework.Input.Events;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables

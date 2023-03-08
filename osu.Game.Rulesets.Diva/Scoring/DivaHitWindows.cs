@@ -1,4 +1,3 @@
-using NUnit.Framework.Constraints;
 using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Diva.Scoring
