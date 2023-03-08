@@ -7,14 +7,12 @@ using osu.Game.Configuration;
 using osu.Game.Rulesets.Judgements;
 using osu.Game.Rulesets.Scoring;
 using osuTK;
-using osu.Game.Rulesets.Osu.Objects.Drawables;
-using osu.Game.Rulesets.Diva.UI;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
 	public partial class DrawableDivaJudgement : DrawableJudgement
     {
-        protected SkinnableLighting Lighting { get; private set; }
+        internal SkinnableLighting Lighting { get; private set; }
 
         [Resolved]
         private OsuConfigManager config { get; set; }
@@ -67,7 +65,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
         protected override Drawable CreateDefaultJudgement(HitResult result) => new DivaJudgementPiece(result);
 
-		private partial class DivaJudgementPiece : DefaultJudgementPiece
+        private partial class DivaJudgementPiece : DefaultJudgementPiece
         {
             public DivaJudgementPiece(HitResult result)
                 : base(result)

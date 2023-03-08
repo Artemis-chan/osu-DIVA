@@ -8,7 +8,6 @@ using osu.Game.Rulesets.Objects;
 using osu.Game.Rulesets.Objects.Types;
 using osu.Game.Rulesets.Diva.Objects;
 using osuTK;
-using System;
 using System.Threading;
 
 namespace osu.Game.Rulesets.Diva.Beatmaps

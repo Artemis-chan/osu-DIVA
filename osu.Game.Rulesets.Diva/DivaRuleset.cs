@@ -20,7 +20,6 @@ using osu.Game.Rulesets.Diva.UI;
 using osu.Game.Rulesets.Diva.Configuration;
 using osu.Game.Overlays.Settings;
 using osu.Game.Beatmaps.Legacy;
-using osu.Framework.IO.Stores;
 using osu.Framework.Allocation;
 using osu.Framework.Graphics.Rendering;
 
