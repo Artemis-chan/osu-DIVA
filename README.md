@@ -1,7 +1,9 @@
 # osu!DIVA
+
 A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!
 
 ## Installation
+
 1. Get the dll from:
     - [Releases](https://github.com/Artemis-chan/osu-DIVA/releases)
     - If that does not work,
@@ -16,13 +18,17 @@ A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!
 3. Restart osu!
 
 ## Build
+
 ### Dependencies
-* [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
-* [git](https://git-scm.com/downloads) (optional, you can just download this repo manually)
+
+- [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
+- [git](https://git-scm.com/downloads) (optional, you can just download this repo manually)
+
 ### Steps
+
 1. Clone the repo
 `git clone https://github.com/Artemis-chan/osu-DIVA.git`
 2. Get inside **osu-DIVA/osu.Game.Rulesets.Diva** folder
 `cd osu-DIVA/osu.Game.Rulesets.Diva`
 3. Run `dotnet publish -c Release`
-4. The compiled ***osu.Game.Rulesets.Diva.dll*** can be found in **bin/Release/net5.0/publish**
+4. The compiled ***osu.Game.Rulesets.Diva.dll*** can be found in **bin/Release/net6.0/publish**

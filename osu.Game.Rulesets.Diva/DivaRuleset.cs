@@ -25,7 +25,7 @@ using osu.Framework.Graphics.Rendering;
 
 namespace osu.Game.Rulesets.Diva
 {
-    public class DivaRuleset : Ruleset
+    public partial class DivaRuleset : Ruleset
     {
         public override string Description => "osu!DIVA";
 
