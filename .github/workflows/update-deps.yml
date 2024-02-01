@@ -26,7 +26,7 @@ jobs:
               echo $latestVer
               $regex = '(?<=\"ppy\.osu\.Game.*\"\s*Version\s*=\s*\")(.*)(?=\")'
               (Get-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj) -replace $regex, $latestVer | Set-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj
-              echo "osuVersion=$latestVer" >> $GITHUB_ENV
+              echo "OSU_VERSION=$latestVer" >> "$GITHUB_OUTPUT"
           }
 
       - run: git --no-pager diff
@@ -35,9 +35,9 @@ jobs:
         uses: peter-evans/create-pull-request@v4.2.3
         with:
           token: ${{ secrets.PAT }}
-          branch: osu-bump-${{ steps.update-csproj.outputs.version }}
-          commit-message: 'chore: update osu packages to ${{ steps.update-csproj.outputs.version }}'
-          title: 'Update to osu! ${{ env.osuVersion }}'
+          branch: osu-bump
+          commit-message: 'chore: update osu packages to ${{ steps.update-csproj.outputs.OSU_VERSION }}'
+          title: 'Update to osu! ${{ steps.update-csproj.outputs.OSU_VERSION }}'
           base: master
           body: |
             #skip-changelog
