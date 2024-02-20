@@ -20,6 +20,7 @@ using osu.Framework.Bindables;
 using osu.Game.Rulesets.Diva.Judgements;
 using osu.Game.Rulesets.Judgements;
 using osu.Framework.Input.Events;
+using osu.Game.Rulesets.Objects;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
@@ -129,6 +130,8 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
         {
         }
 
+        protected static void ApplyMiss(JudgementResult r, DrawableHitObject s) => r.Type = HitResult.Miss;
+
         protected override void CheckForResult(bool userTriggered, double timeOffset)
         {
             if (Judged)
@@ -139,7 +142,7 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
             if (!HitObject.HitWindows.CanBeHit(timeOffset) && base.Time.Current > HitObject.StartTime)
             {
-                ApplyResult(r => r.Type = HitResult.Miss);
+                ApplyResult(ApplyMiss);
                 return;
             }
 
@@ -150,9 +153,9 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             if (pressed && timeOffset > (-time_action))
             {
                 if (validPress)
-                    ApplyResult(r => r.Type = result);
+                    ApplyResult((r, s) => r.Type = result);
                 else
-                    ApplyResult(r => r.Type = HitResult.Miss);
+                    ApplyResult(ApplyMiss);
                 pressed = false;
             }
         }
