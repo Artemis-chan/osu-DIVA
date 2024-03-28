@@ -21,7 +21,7 @@ A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!
 
 ### Dependencies
 
-- [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
+- [.NET 8.0(min) SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 - [git](https://git-scm.com/downloads) (optional, you can just download this repo manually)
 
 ### Steps
