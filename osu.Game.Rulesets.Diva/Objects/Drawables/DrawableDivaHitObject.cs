@@ -206,7 +206,15 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             if (Judged)
                 return false;
 
-            validPress = e.Action == validAction;
+            var action = e.Action switch
+            {
+                DivaAction.Right => DivaAction.Circle,
+                DivaAction.Down => DivaAction.Cross,
+                DivaAction.Up => DivaAction.Triangle,
+                DivaAction.Left => DivaAction.Square,
+                _ => e.Action,
+            };
+            validPress = action == validAction;
             pressed = true;
 
             return true;
