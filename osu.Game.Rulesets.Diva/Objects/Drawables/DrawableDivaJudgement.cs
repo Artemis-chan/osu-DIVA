@@ -5,14 +5,17 @@ using osu.Framework.Allocation;
 using osu.Framework.Graphics;
 using osu.Game.Configuration;
 using osu.Game.Rulesets.Judgements;
+using osu.Game.Rulesets.Objects.Drawables;
 using osu.Game.Rulesets.Scoring;
 using osuTK;
+using osuTK.Graphics;
 
 namespace osu.Game.Rulesets.Diva.Objects.Drawables
 {
-	public partial class DrawableDivaJudgement : DrawableJudgement
+    public partial class DrawableDivaJudgement : DrawableJudgement
     {
         internal SkinnableLighting Lighting { get; private set; }
+        internal Color4 AccentColour { get; private set; }
 
         [Resolved]
         private OsuConfigManager config { get; set; }
@@ -30,14 +33,23 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
             });
         }
 
+        public override void Apply(JudgementResult result, DrawableHitObject judgedObject)
+        {
+            base.Apply(result, judgedObject);
+            if (judgedObject is not DrawableDivaHitObject drawableDivaHitObject)
+                return;
+
+            AccentColour = drawableDivaHitObject.AccentColour.Value;
+        }
+
         protected override void PrepareForUse()
         {
             base.PrepareForUse();
 
             Lighting.ResetAnimation();
-            Lighting.SetColourFrom(JudgedObject, Result);
+            Lighting.SetColourFrom(this, Result);
 
-            if (JudgedObject?.HitObject is DivaHitObject divaObject)
+            if (JudgedHitObject is DivaHitObject divaObject)
             {
                 Position = divaObject.Position;
                 Scale = new Vector2(1);
