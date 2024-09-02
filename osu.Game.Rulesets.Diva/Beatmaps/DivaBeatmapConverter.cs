@@ -97,38 +97,35 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         //placeholder
         private DivaAction ValidAction(Vector2 currentObjectPos, bool newCombo)
         {
-            var ac = DivaAction.Circle;
-
             var distance = (prevObjectPos - currentObjectPos).Length;
-            if (distance > osuObjectSize * 1.2 || (streamLength > 20 && newCombo))
+            if (distance < osuObjectSize * 1.2 && (streamLength < 20 || !newCombo))
             {
-                streamLength = 0;
-                switch (prevAction)
-                {
-                    case DivaAction.Triangle:
-                        ac = DivaAction.Circle;
-                        break;
-
-                    case DivaAction.Circle:
-                        if (this.TargetButtons < 2) break;
-                        ac = DivaAction.Cross;
-                        break;
-
-                    case DivaAction.Cross:
-                        if (this.TargetButtons < 3) break;
-                        ac = DivaAction.Square;
-                        break;
-
-                    case DivaAction.Square:
-                        if (this.TargetButtons < 4) break;
-                        ac = DivaAction.Triangle;
-                        break;
-                }
+                streamLength++;
+                return prevAction;
             }
             else
             {
-                ac = prevAction;
-                streamLength++;
+                streamLength = 0;
+            }
+
+            var ac = DivaAction.Circle;
+
+            switch (prevAction)
+            {
+                case DivaAction.Circle:
+                    if (this.TargetButtons < 2) break;
+                    ac = DivaAction.Cross;
+                    break;
+
+                case DivaAction.Cross:
+                    if (this.TargetButtons < 3) break;
+                    ac = DivaAction.Square;
+                    break;
+
+                case DivaAction.Square:
+                    if (this.TargetButtons < 4) break;
+                    ac = DivaAction.Triangle;
+                    break;
             }
 
             prevAction = ac;
