@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         public int TargetButtons;
         public bool AllowDoubles = true;
 
-        private DivaAction prevAction = DivaAction.Triangle;
+        private DivaAction prevAction;
         private Vector2 prevObjectPos = Vector2.Zero;
 
         private float osuObjectSize = 0;
@@ -41,6 +41,8 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                 >= 2f => 2,
                 _ => 1,
             };
+
+            prevAction = (DivaAction)(TargetButtons - 1);
 
             osuObjectSize = (54.4f - 4.48f *  beatmap.Difficulty.CircleSize) * 2;
 
@@ -95,8 +97,9 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         //placeholder
         private DivaAction ValidAction(Vector2 currentObjectPos, bool newCombo)
         {
+            var ac = DivaAction.Circle;
+
             var distance = (prevObjectPos - currentObjectPos).Length;
-            var ac = prevAction;
             if (distance > osuObjectSize * 1.2 || (streamLength > 20 && newCombo))
             {
                 streamLength = 0;
@@ -124,6 +127,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             }
             else
             {
+                ac = prevAction;
                 streamLength++;
             }
 
