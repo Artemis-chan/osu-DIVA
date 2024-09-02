@@ -97,30 +97,9 @@ namespace osu.Game.Rulesets.Diva.Objects.Drawables
 
             approachPiece.Texture = textures.Get($"{textureLocation}{validAction.ToString()}Move");
             approachHand.Texture = textures.Get("hand");
-
         }
 
         protected virtual string GetTextureLocation() => (useXB.Value) ? "XB/" : "";
-
-        public override double LifetimeStart
-        {
-            get => base.LifetimeStart;
-            set
-            {
-                base.LifetimeStart = value;
-            }
-        }
-        public override double LifetimeEnd
-        {
-            get
-            {
-                return base.LifetimeEnd;
-            }
-            set
-            {
-                base.LifetimeEnd = value;
-            }
-        }
 
         public override IEnumerable<HitSampleInfo> GetSamples() => new[]
         {
