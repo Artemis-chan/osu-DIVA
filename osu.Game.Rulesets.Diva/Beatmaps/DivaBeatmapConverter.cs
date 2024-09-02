@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         public int TargetButtons;
         public bool AllowDoubles = true;
 
-        private DivaAction prevAction;
+        private DivaAction prevAction = DivaAction.Triangle;
         private Vector2 prevObjectPos = Vector2.Zero;
 
         private float osuObjectSize = 0;
@@ -43,8 +43,6 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
             };
 
             osuObjectSize = (54.4f - 4.48f *  beatmap.Difficulty.CircleSize) * 2;
-
-            prevAction = (DivaAction)(TargetButtons - 1);
 
             //Console.WriteLine(this.TargetButtons);
         }
