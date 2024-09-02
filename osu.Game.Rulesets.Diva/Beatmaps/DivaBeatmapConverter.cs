@@ -42,9 +42,9 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                 _ => 1,
             };
 
-            prevAction = (DivaAction)(TargetButtons - 1);
-
             osuObjectSize = (54.4f - 4.48f *  beatmap.Difficulty.CircleSize) * 2;
+
+            prevAction = (DivaAction)(TargetButtons - 1);
 
             //Console.WriteLine(this.TargetButtons);
         }
@@ -55,7 +55,6 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         {
             //not sure if handling the cancellation is needed, as offical modes doesnt handle *scratches my head* or even its possible
             var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
-
             var newCombo = (original as IHasCombo)?.NewCombo ?? true;
 
             //currently press presses are placed in place of sliders as placeholder, but arcade slider are better suited for these
