@@ -25,6 +25,9 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         private DivaAction prevAction = DivaAction.Triangle;
 
         private Vector2 prevObjectPos = Vector2.Zero;
+
+        private float osuObjectSize = 0;
+        private int streamLength = 0;
         //these variables were at the end of the class, such heresy had i done
 
         private const float approach_piece_distance = 1200;
@@ -40,6 +43,8 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                 _ => 1,
             };
 
+            osuObjectSize = (54.4f - 4.48f *  beatmap.Difficulty.CircleSize) * 2;
+
             //Console.WriteLine(this.TargetButtons);
         }
 
@@ -49,6 +54,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         {
             //not sure if handling the cancellation is needed, as offical modes doesnt handle *scratches my head* or even its possible
             var pos = (original as IHasPosition)?.Position ?? Vector2.Zero;
+            var newCombo = (original as IHasCombo)?.NewCombo ?? true;
 
             //currently press presses are placed in place of sliders as placeholder, but arcade slider are better suited for these
             //another option would be long sliders: arcade sliders, short sliders: doubles
@@ -59,7 +65,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                     Samples = original.Samples,
                     StartTime = original.StartTime,
                     Position = pos,
-                    ValidAction = ValidAction(),
+                    ValidAction = ValidAction(pos, newCombo),
                     DoubleAction = DoubleAction(prevAction),
                     ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
                 };
@@ -71,7 +77,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
                     Samples = original.Samples,
                     StartTime = original.StartTime,
                     Position = pos,
-                    ValidAction = ValidAction(),
+                    ValidAction = ValidAction(pos, newCombo),
                     ApproachPieceOriginPosition = GetApproachPieceOriginPos(pos),
                 };
             }
@@ -87,8 +93,19 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         };
 
         //placeholder
-        private DivaAction ValidAction()
+        private DivaAction ValidAction(Vector2 currentObjectPos, bool newCombo)
         {
+            var distance = (prevObjectPos - currentObjectPos).Length;
+            if (distance < osuObjectSize * 1.2 && (streamLength < 20 || !newCombo))
+            {
+                streamLength++;
+                return prevAction;
+            }
+            else
+            {
+                streamLength = 0;
+            }
+
             var ac = DivaAction.Circle;
 
             switch (prevAction)
