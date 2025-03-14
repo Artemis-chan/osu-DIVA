@@ -23,6 +23,7 @@ namespace osu.Game.Rulesets.Diva.Beatmaps
         public bool AllowDoubles = true;
 
         private DivaAction prevAction = DivaAction.Triangle;
+
         private Vector2 prevObjectPos = Vector2.Zero;
         //these variables were at the end of the class, such heresy had i done
 
