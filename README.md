@@ -6,7 +6,7 @@ A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!
 
 1. Get the dll from:
     - [Releases](https://github.com/Artemis-chan/osu-DIVA/releases)
-    - If that does not work, [GitHub Actions](https://nightly.link/Artemis-chan/osu-DIVA/workflows/debug/master)
+    - If that does not work, [GitHub Actions](https://nightly.link/Artemis-chan/osu-DIVA/workflows/debug/master/release.zip)
     - or [compile it yourself](#build)
 2. Place it in osu! user ruleset folder
     1. Open osu!Lazer
