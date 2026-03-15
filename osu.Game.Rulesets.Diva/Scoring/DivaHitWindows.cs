@@ -2,7 +2,7 @@ using osu.Game.Rulesets.Scoring;
 
 namespace osu.Game.Rulesets.Diva.Scoring
 {
-    public class DivaHitWindows : HitWindows
+    public class DivaHitWindows : DefaultHitWindows
     {
         public override bool IsHitResultAllowed(HitResult result)
         {
@@ -16,6 +16,7 @@ namespace osu.Game.Rulesets.Diva.Scoring
                 case HitResult.Miss:
                     return true;
             }
+
             return false;
         }
     }
