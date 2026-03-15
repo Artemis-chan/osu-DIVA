@@ -15,19 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      
       - name: Bump nuget package version
         id: update-csproj
         run: |
-          $jdata = curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | ConvertFrom-Json
-          $latestVer = $jdata.tag_name
-          $valid = ![string]::IsNullOrWhiteSpace($latestVer)
-          if($valid) 
-          {
-              echo $latestVer
-              $regex = '(?<=\"ppy\.osu\.Game.*\"\s*Version\s*=\s*\")(.*)(?=\")'
-              (Get-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj) -replace $regex, $latestVer | Set-Content osu.Game.Rulesets.Diva\osu.Game.Rulesets.Diva.csproj
-              echo "OSU_VERSION=$latestVer" >> "$GITHUB_OUTPUT"
-          }
+          dotnet package update ppy.osu.Game --project osu.Game.Rulesets.Diva
+          dotnet package update ppy.osu.Game.Rulesets.Osu --project osu.Game.Rulesets.Diva
 
       - run: git --no-pager diff
 
